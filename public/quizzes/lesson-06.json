@@ -1,0 +1,86 @@
+{
+  "id": "quiz-lesson-06",
+  "lessonId": "lesson-06",
+  "title": "Prototype",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the intent of the Prototype pattern?",
+      "options": [
+        { "id": "a", "text": "Create new objects by copying an existing prototypical instance" },
+        { "id": "b", "text": "Ensure only one instance of a class exists" },
+        { "id": "c", "text": "Build a complex object step by step" },
+        { "id": "d", "text": "Provide a simplified interface to a subsystem" }
+      ],
+      "answer": "a",
+      "explanation": "Prototype creates objects by cloning. One instance = Singleton; step-by-step = Builder; simplified interface = Facade."
+    },
+    {
+      "id": "q2",
+      "type": "single-choice",
+      "prompt": "What is the difference between a shallow copy and a deep copy?",
+      "options": [
+        { "id": "a", "text": "A shallow copy shares nested objects; a deep copy duplicates every level so nothing is shared" },
+        { "id": "b", "text": "A shallow copy is always slower than a deep copy" },
+        { "id": "c", "text": "A deep copy shares nested objects; a shallow copy duplicates everything" },
+        { "id": "d", "text": "They are the same thing" }
+      ],
+      "answer": "a",
+      "explanation": "Shallow duplicates only the top level (nested objects are shared); deep duplicates all levels."
+    },
+    {
+      "id": "q3",
+      "type": "single-choice",
+      "prompt": "Why is a clone() that does `Object.assign(new Thing(), this)` often a bug?",
+      "options": [
+        { "id": "a", "text": "It is a shallow copy, so the clone shares the original's nested objects and arrays" },
+        { "id": "b", "text": "It always throws an exception" },
+        { "id": "c", "text": "It creates two singletons" },
+        { "id": "d", "text": "It permanently freezes the original" }
+      ],
+      "answer": "a",
+      "explanation": "Top-level assignment leaves nested references shared, so mutating one 'copy' changes the other."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which statements about structuredClone() are TRUE? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "It performs a deep copy of plain data" },
+        { "id": "b", "text": "It preserves a class instance's methods and prototype" },
+        { "id": "c", "text": "It cannot clone functions" },
+        { "id": "d", "text": "It returns a plain object when given a class instance" }
+      ],
+      "answer": ["a", "c", "d"],
+      "explanation": "structuredClone deep-copies data but drops methods/prototype (returns a plain object) and can't clone functions."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "How does the Prototype pattern relate to JavaScript's prototypal inheritance?",
+      "options": [
+        { "id": "a", "text": "They share a name but are different ideas: the pattern copies objects, prototypal inheritance shares behavior via a linked prototype" },
+        { "id": "b", "text": "They are exactly the same mechanism" },
+        { "id": "c", "text": "Prototypal inheritance is a way to guarantee a single instance" },
+        { "id": "d", "text": "The pattern only works in languages without prototypes" }
+      ],
+      "answer": "a",
+      "explanation": "The Prototype pattern is about cloning; JS prototypal inheritance is a language feature for sharing methods. Same word, different concept."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "When is Prototype especially useful?",
+      "options": [
+        { "id": "a", "text": "When constructing an object from scratch is expensive and you need many similar copies" },
+        { "id": "b", "text": "When you must forbid copying entirely" },
+        { "id": "c", "text": "When an object should have exactly one instance" },
+        { "id": "d", "text": "When two incompatible interfaces must work together" }
+      ],
+      "answer": "a",
+      "explanation": "Cloning a prepared prototype is cheaper than rebuilding, and avoids a factory subclass per configuration."
+    }
+  ]
+}

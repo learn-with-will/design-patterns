@@ -1,0 +1,85 @@
+{
+  "id": "quiz-lesson-21",
+  "lessonId": "lesson-21",
+  "title": "Strategy & State",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the intent of the Strategy pattern?",
+      "options": [
+        { "id": "a", "text": "Define a family of interchangeable algorithms so the algorithm can vary independently from clients" },
+        { "id": "b", "text": "Let an object change behavior as its internal state changes" },
+        { "id": "c", "text": "Capture and restore an object's state" },
+        { "id": "d", "text": "Ensure a class has one instance" }
+      ],
+      "answer": "a",
+      "explanation": "Strategy makes algorithms interchangeable. Behavior changing with state = State; capture/restore = Memento; one instance = Singleton."
+    },
+    {
+      "id": "q2",
+      "type": "single-choice",
+      "prompt": "What is the intent of the State pattern?",
+      "options": [
+        { "id": "a", "text": "Allow an object to alter its behavior when its internal state changes, so it appears to change its class" },
+        { "id": "b", "text": "Provide a simplified interface to a subsystem" },
+        { "id": "c", "text": "Select one of several interchangeable algorithms" },
+        { "id": "d", "text": "Share intrinsic state across many objects" }
+      ],
+      "answer": "a",
+      "explanation": "State ties behavior to a changing internal mode. Simplify = Facade; selecting an algorithm = Strategy; sharing state = Flyweight."
+    },
+    {
+      "id": "q3",
+      "type": "single-choice",
+      "prompt": "Strategy and State share nearly the same structure. What is the KEY difference?",
+      "options": [
+        { "id": "a", "text": "Intent and who drives the change: the client picks a Strategy; a State object transitions itself as its state changes" },
+        { "id": "b", "text": "Strategy uses inheritance and State uses composition" },
+        { "id": "c", "text": "They have completely different class diagrams" },
+        { "id": "d", "text": "State cannot be implemented in TypeScript" }
+      ],
+      "answer": "a",
+      "explanation": "Same delegation structure, different intent: choosing an algorithm (Strategy) vs behavior tied to self-transitioning state (State)."
+    },
+    {
+      "id": "q4",
+      "type": "single-choice",
+      "prompt": "In the State pattern, who usually triggers the move to the next state?",
+      "options": [
+        { "id": "a", "text": "The state objects themselves — a state knows and sets the next state" },
+        { "id": "b", "text": "The client always sets it manually, like a Strategy" },
+        { "id": "c", "text": "A global singleton registry" },
+        { "id": "d", "text": "The garbage collector" }
+      ],
+      "answer": "a",
+      "explanation": "States commonly reference and transition to other states, so the object advances on its own."
+    },
+    {
+      "id": "q5",
+      "type": "match-pair",
+      "prompt": "Match each characteristic to the pattern it best fits.",
+      "pairs": [
+        { "left": "Client selects among interchangeable algorithms", "right": "Strategy" },
+        { "left": "Object transitions through modes over its lifetime", "right": "State" },
+        { "left": "The parts are independent and unaware of each other", "right": "Strategy" },
+        { "left": "The parts often trigger transitions to one another", "right": "State" }
+      ],
+      "explanation": "Strategy: independent algorithms chosen by the client. State: modes that transition, often referencing each other."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "You're replacing a large if/else on an order's 'status' that changes over time (pending, paid, shipped). Which pattern fits?",
+      "options": [
+        { "id": "a", "text": "State — the object moves through modes with different behavior" },
+        { "id": "b", "text": "Strategy — you're just picking one algorithm once" },
+        { "id": "c", "text": "Singleton" },
+        { "id": "d", "text": "Flyweight" }
+      ],
+      "answer": "a",
+      "explanation": "A changing status with per-mode behavior and transitions is the State pattern; Strategy would be a one-time algorithm choice."
+    }
+  ]
+}

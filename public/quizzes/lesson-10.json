@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-10",
+  "lessonId": "lesson-10",
+  "title": "Composite",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the intent of the Composite pattern?",
+      "options": [
+        { "id": "a", "text": "Compose objects into tree structures and let clients treat individual objects and compositions uniformly" },
+        { "id": "b", "text": "Decouple an abstraction from its implementation" },
+        { "id": "c", "text": "Attach responsibilities to an object dynamically" },
+        { "id": "d", "text": "Ensure a single instance" }
+      ],
+      "answer": "a",
+      "explanation": "Composite is about part-whole trees with uniform treatment. Decoupling two dimensions = Bridge; adding responsibilities = Decorator; one instance = Singleton."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each Composite role to its description.",
+      "pairs": [
+        { "left": "Component", "right": "The shared interface for all nodes" },
+        { "left": "Leaf", "right": "A node with no children" },
+        { "left": "Composite", "right": "A node that holds children and delegates to them" }
+      ],
+      "explanation": "Leaves and composites share the Component interface; composites implement operations by delegating to their children."
+    },
+    {
+      "id": "q3",
+      "type": "single-choice",
+      "prompt": "How does a composite typically implement an operation such as size()?",
+      "options": [
+        { "id": "a", "text": "By recursing — delegating to each child and combining the results" },
+        { "id": "b", "text": "By cloning itself" },
+        { "id": "c", "text": "By converting its interface to another" },
+        { "id": "d", "text": "By storing a single global value" }
+      ],
+      "answer": "a",
+      "explanation": "A folder's size() sums the sizes of its children, each of which may itself be a folder — recursion through the tree."
+    },
+    {
+      "id": "q4",
+      "type": "fill-blank",
+      "prompt": "Composite represents ____-whole hierarchies, where wholes are made of parts that may themselves be wholes.",
+      "answer": ["part", "Part"],
+      "explanation": "The pattern models part-whole hierarchies such as files within folders within folders."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "What is the well-known design tension in Composite?",
+      "options": [
+        { "id": "a", "text": "Whether add/remove belong on the shared Component (forcing leaves to implement them) or only on the Composite" },
+        { "id": "b", "text": "Whether to use a private constructor" },
+        { "id": "c", "text": "Whether to deep-copy or shallow-copy" },
+        { "id": "d", "text": "Whether to inject dependencies" }
+      ],
+      "answer": "a",
+      "explanation": "Putting child-management on the Component forces leaves to implement methods that don't apply, often by throwing — a Liskov trade-off."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "When is Composite the WRONG choice?",
+      "options": [
+        { "id": "a", "text": "When the data is a flat collection, not a genuine tree" },
+        { "id": "b", "text": "When you have folders nested inside folders" },
+        { "id": "c", "text": "When you want to treat leaves and groups uniformly" },
+        { "id": "d", "text": "When a UI panel contains other panels" }
+      ],
+      "answer": "a",
+      "explanation": "Composite earns its keep only with real nesting; a flat list gains nothing from it."
+    }
+  ]
+}

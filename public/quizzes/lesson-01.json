@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-01",
+  "lessonId": "lesson-01",
+  "title": "What Are Design Patterns?",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Which best describes a design pattern?",
+      "options": [
+        { "id": "a", "text": "A named, reusable solution to a recurring design problem that you adapt to your situation" },
+        { "id": "b", "text": "A snippet of code you copy and paste unchanged" },
+        { "id": "c", "text": "A library you install from npm" },
+        { "id": "d", "text": "An algorithm like quicksort" }
+      ],
+      "answer": "a",
+      "explanation": "A pattern is a general, reusable solution you adapt — not copy-paste code, not a library, and not an algorithm (which computes a result rather than arranging responsibilities)."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each GoF category to what it is mainly about.",
+      "pairs": [
+        { "left": "Creational", "right": "Object creation" },
+        { "left": "Structural", "right": "Composition of classes and objects" },
+        { "left": "Behavioral", "right": "Communication between objects" }
+      ],
+      "explanation": "GoF sorts the 23 patterns into creational (how objects are made), structural (how they're assembled), and behavioral (how they interact)."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which statements about design patterns are TRUE? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "They give a team a shared vocabulary for design" },
+        { "id": "b", "text": "They always make code better, so use as many as possible" },
+        { "id": "c", "text": "They come with consequences and trade-offs" },
+        { "id": "d", "text": "They describe an arrangement you adapt, not exact code" }
+      ],
+      "answer": ["a", "c", "d"],
+      "explanation": "Patterns are a shared vocabulary, carry trade-offs, and are adaptable templates. Applying as many as possible is over-engineering — patterns are not a quality badge."
+    },
+    {
+      "id": "q4",
+      "type": "fill-blank",
+      "prompt": "Complete the GoF principle: \"Program to an ____, not an implementation.\"",
+      "answer": ["interface", "Interface"],
+      "explanation": "Depending on an interface (what an object can do) rather than a concrete class (how it does it) lets you swap implementations freely."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "Roughly how many patterns did the Gang of Four catalog, and in what year?",
+      "options": [
+        { "id": "a", "text": "23 patterns, in 1994" },
+        { "id": "b", "text": "10 patterns, in 1977" },
+        { "id": "c", "text": "50 patterns, in 2005" },
+        { "id": "d", "text": "23 patterns, in 2015" }
+      ],
+      "answer": "a",
+      "explanation": "The 1994 GoF book cataloged 23 patterns. (Christopher Alexander's architectural book that inspired the idea was 1977.)"
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "A developer wraps a one-line config read in three interfaces, an Abstract Factory, and a Singleton 'to be enterprise-ready.' What is this an example of?",
+      "options": [
+        { "id": "a", "text": "Over-engineering — paying a pattern's cost with no matching benefit" },
+        { "id": "b", "text": "Programming to an interface" },
+        { "id": "c", "text": "Favoring composition over inheritance" },
+        { "id": "d", "text": "A behavioral pattern" }
+      ],
+      "answer": "a",
+      "explanation": "Patterns add classes and indirection. Applying them where simple code would do adds cost with no benefit — the definition of over-engineering."
+    }
+  ]
+}

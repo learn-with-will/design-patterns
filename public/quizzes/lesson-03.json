@@ -1,0 +1,80 @@
+{
+  "id": "quiz-lesson-03",
+  "lessonId": "lesson-03",
+  "title": "Factory Method",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the intent of the Factory Method pattern?",
+      "options": [
+        { "id": "a", "text": "Define a method for creating an object but let subclasses decide which concrete class to instantiate" },
+        { "id": "b", "text": "Ensure a class has only one instance" },
+        { "id": "c", "text": "Create whole families of related objects at once" },
+        { "id": "d", "text": "Add responsibilities to an object at runtime" }
+      ],
+      "answer": "a",
+      "explanation": "Factory Method defers instantiation of a single product to subclasses. (One instance = Singleton; families = Abstract Factory; runtime responsibilities = Decorator.)"
+    },
+    {
+      "id": "q2",
+      "type": "single-choice",
+      "prompt": "Which mechanism does Factory Method use to vary which product is created?",
+      "options": [
+        { "id": "a", "text": "Inheritance — a subclass overrides the factory method" },
+        { "id": "b", "text": "Composition — you hold a separate factory object" },
+        { "id": "c", "text": "Reflection over class names" },
+        { "id": "d", "text": "Cloning an existing instance" }
+      ],
+      "answer": "a",
+      "explanation": "A concrete creator subclass overrides the factory method to return its product. (Composition is how Abstract Factory varies products; cloning is Prototype.)"
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "In Factory Method, the higher-level code should depend on the Product ____ rather than a concrete product class.",
+      "answer": ["interface", "Interface", "abstraction"],
+      "explanation": "Returning and using the Product interface keeps the creator decoupled from concrete products."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which are genuine benefits of Factory Method? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "It decouples the code that uses a product from the code that creates it" },
+        { "id": "b", "text": "Adding a new product can be done by adding a subclass, without editing existing code (OCP)" },
+        { "id": "c", "text": "It guarantees only one product instance ever exists" },
+        { "id": "d", "text": "It centralizes creation logic in one method" }
+      ],
+      "answer": ["a", "b", "d"],
+      "explanation": "Factory Method decouples use from creation, supports OCP, and centralizes creation. Guaranteeing a single instance is Singleton, not Factory Method."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "In TypeScript, what is a common lighter-weight alternative to a Factory Method subclass?",
+      "options": [
+        { "id": "a", "text": "Passing a factory function that returns the product" },
+        { "id": "b", "text": "Using a global variable" },
+        { "id": "c", "text": "Deep-cloning the creator" },
+        { "id": "d", "text": "Making every field public" }
+      ],
+      "answer": "a",
+      "explanation": "Because functions are first-class in TS, a factory function can carry the creation decision without defining a new subclass."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "What is the main downside of Factory Method?",
+      "options": [
+        { "id": "a", "text": "It can multiply subclasses, sometimes just to change one product" },
+        { "id": "b", "text": "It makes objects impossible to test" },
+        { "id": "c", "text": "It requires a database" },
+        { "id": "d", "text": "It always slows programs down" }
+      ],
+      "answer": "a",
+      "explanation": "You may create a whole subclass to vary one product, which is overkill when a parameter or factory function would do."
+    }
+  ]
+}

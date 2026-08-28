@@ -1,0 +1,80 @@
+{
+  "id": "quiz-lesson-12",
+  "lessonId": "lesson-12",
+  "title": "Facade",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the intent of the Facade pattern?",
+      "options": [
+        { "id": "a", "text": "Provide a unified, higher-level interface that makes a complex subsystem easier to use" },
+        { "id": "b", "text": "Convert one class's interface into another" },
+        { "id": "c", "text": "Add responsibilities to an object dynamically" },
+        { "id": "d", "text": "Clone objects from a prototype" }
+      ],
+      "answer": "a",
+      "explanation": "Facade simplifies a subsystem behind one interface. Converting an interface = Adapter; adding responsibilities = Decorator; cloning = Prototype."
+    },
+    {
+      "id": "q2",
+      "type": "single-choice",
+      "prompt": "Does a Facade prevent callers from using the subsystem directly?",
+      "options": [
+        { "id": "a", "text": "No — it offers an easy path but leaves the subsystem reachable for advanced needs" },
+        { "id": "b", "text": "Yes — the subsystem becomes completely inaccessible" },
+        { "id": "c", "text": "Yes — it deletes the subsystem classes" },
+        { "id": "d", "text": "Only if the subsystem is a singleton" }
+      ],
+      "answer": "a",
+      "explanation": "A facade simplifies the common case without hiding or forbidding direct subsystem access for edge cases."
+    },
+    {
+      "id": "q3",
+      "type": "single-choice",
+      "prompt": "How does Facade differ from Adapter?",
+      "options": [
+        { "id": "a", "text": "Facade wraps many classes behind a new simpler interface; Adapter converts one object's interface to a specific expected one" },
+        { "id": "b", "text": "They are identical" },
+        { "id": "c", "text": "Facade changes an interface; Adapter simplifies a subsystem" },
+        { "id": "d", "text": "Facade controls access; Adapter adds behavior" }
+      ],
+      "answer": "a",
+      "explanation": "Facade = simplify many; Adapter = convert one interface into a specific expected interface."
+    },
+    {
+      "id": "q4",
+      "type": "single-choice",
+      "prompt": "What is the main risk of a Facade over time?",
+      "options": [
+        { "id": "a", "text": "It can swell into a god object that accumulates too many responsibilities" },
+        { "id": "b", "text": "It forces two threads to collide" },
+        { "id": "c", "text": "It always makes the subsystem slower" },
+        { "id": "d", "text": "It prevents dependency injection" }
+      ],
+      "answer": "a",
+      "explanation": "If every feature is bolted on, the facade relocates the complexity it was meant to hide — the god-object anti-pattern."
+    },
+    {
+      "id": "q5",
+      "type": "fill-blank",
+      "prompt": "A key benefit of Facade is that it reduces ____ between client code and a complex subsystem.",
+      "answer": ["coupling", "Coupling"],
+      "explanation": "Clients depend on the single facade instead of many subsystem internals, lowering coupling."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "In the order example, what does placeOrder() encode so clients don't have to?",
+      "options": [
+        { "id": "a", "text": "The correct sequence: reserve inventory, then charge payment, then schedule shipping" },
+        { "id": "b", "text": "The single global instance of the order" },
+        { "id": "c", "text": "How to deep-copy the order" },
+        { "id": "d", "text": "How to convert the order to another interface" }
+      ],
+      "answer": "a",
+      "explanation": "The facade captures the workflow and ordering across subsystems so each caller doesn't repeat it."
+    }
+  ]
+}

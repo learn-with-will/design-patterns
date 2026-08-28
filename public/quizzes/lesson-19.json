@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-19",
+  "lessonId": "lesson-19",
+  "title": "Memento",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the intent of the Memento pattern?",
+      "options": [
+        { "id": "a", "text": "Capture and externalize an object's internal state, without violating encapsulation, so it can be restored later" },
+        { "id": "b", "text": "Define how a set of objects interact" },
+        { "id": "c", "text": "Access a collection's elements sequentially" },
+        { "id": "d", "text": "Convert one interface into another" }
+      ],
+      "answer": "a",
+      "explanation": "Memento snapshots state for later restoration. Object interaction = Mediator; sequential access = Iterator; converting = Adapter."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each Memento role to its responsibility.",
+      "pairs": [
+        { "left": "Originator", "right": "Creates and restores snapshots of its own state" },
+        { "left": "Memento", "right": "The opaque snapshot of state" },
+        { "left": "Caretaker", "right": "Stores mementos without inspecting them" }
+      ],
+      "explanation": "The originator owns the state; the memento holds it opaquely; the caretaker keeps mementos hands-off."
+    },
+    {
+      "id": "q3",
+      "type": "single-choice",
+      "prompt": "Why must the caretaker treat a memento as opaque?",
+      "options": [
+        { "id": "a", "text": "To preserve encapsulation — only the originator should interpret the saved internals" },
+        { "id": "b", "text": "Because mementos are always encrypted" },
+        { "id": "c", "text": "Because the caretaker is a singleton" },
+        { "id": "d", "text": "Because it makes the memento faster" }
+      ],
+      "answer": "a",
+      "explanation": "Keeping the memento opaque means other objects can't read or tamper with the originator's internal state."
+    },
+    {
+      "id": "q4",
+      "type": "single-choice",
+      "prompt": "Which pattern does Memento commonly pair with to implement undo?",
+      "options": [
+        { "id": "a", "text": "Command — a command captures a memento before executing and restores it in undo()" },
+        { "id": "b", "text": "Flyweight" },
+        { "id": "c", "text": "Abstract Factory" },
+        { "id": "d", "text": "Adapter" }
+      ],
+      "answer": "a",
+      "explanation": "Command represents the action; Memento restores the prior state, together giving clean undo/redo."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "What is the main cost of using Memento?",
+      "options": [
+        { "id": "a", "text": "Memory — snapshots can be large, and a long history multiplies that" },
+        { "id": "b", "text": "It forces multiple inheritance" },
+        { "id": "c", "text": "It prevents undo" },
+        { "id": "d", "text": "It always breaks encapsulation" }
+      ],
+      "answer": "a",
+      "explanation": "Snapshots consume memory; you often bound the history or store diffs for large state."
+    },
+    {
+      "id": "q6",
+      "type": "fill-blank",
+      "prompt": "Memento is the standard foundation for implementing ____ in editors and apps.",
+      "answer": ["undo", "Undo", "undo/redo"],
+      "explanation": "Restoring a prior snapshot is exactly how undo (and redo) is implemented."
+    }
+  ]
+}

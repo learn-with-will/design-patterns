@@ -1,0 +1,86 @@
+{
+  "id": "quiz-lesson-07",
+  "lessonId": "lesson-07",
+  "title": "Singleton",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the intent of the Singleton pattern?",
+      "options": [
+        { "id": "a", "text": "Ensure a class has only one instance and provide a global point of access to it" },
+        { "id": "b", "text": "Create objects by cloning a prototype" },
+        { "id": "c", "text": "Build a complex object step by step" },
+        { "id": "d", "text": "Create families of related products" }
+      ],
+      "answer": "a",
+      "explanation": "Singleton restricts a class to one instance with global access. Cloning = Prototype; step-by-step = Builder; families = Abstract Factory."
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "Which are common, valid criticisms of Singleton? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "It introduces global mutable state" },
+        { "id": "b", "text": "It hides a class's real dependencies" },
+        { "id": "c", "text": "It makes unit testing harder because state leaks between tests" },
+        { "id": "d", "text": "It always makes programs run faster" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Singleton's downsides are global state, hidden dependencies, and testing pain. It has nothing to do with speed."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which two things make a class a Singleton? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "A private constructor" },
+        { "id": "b", "text": "A static accessor that returns the single instance" },
+        { "id": "c", "text": "A clone() method" },
+        { "id": "d", "text": "A fluent build() method" }
+      ],
+      "answer": ["a", "b"],
+      "explanation": "A private constructor blocks outside instantiation; a static accessor lazily creates and returns the one instance."
+    },
+    {
+      "id": "q4",
+      "type": "single-choice",
+      "prompt": "Why is a Singleton class often unnecessary in TypeScript?",
+      "options": [
+        { "id": "a", "text": "An ES module is evaluated once, so a module-level export is already a single shared instance" },
+        { "id": "b", "text": "TypeScript forbids the `new` keyword" },
+        { "id": "c", "text": "TypeScript objects are automatically global" },
+        { "id": "d", "text": "Classes cannot have static members in TypeScript" }
+      ],
+      "answer": "a",
+      "explanation": "Modules run once and their exports are shared across imports, giving a single instance without the Singleton ceremony."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "Is the classic 'two threads create two instances' thread-safety concern relevant in JavaScript?",
+      "options": [
+        { "id": "a", "text": "No — JavaScript is single-threaded, so that race doesn't occur (it matters in multi-threaded languages)" },
+        { "id": "b", "text": "Yes — JavaScript runs every function on its own thread" },
+        { "id": "c", "text": "Yes — and it can only be fixed with locks in JavaScript" },
+        { "id": "d", "text": "It is impossible to create a Singleton in JavaScript" }
+      ],
+      "answer": "a",
+      "explanation": "Single-threaded JS avoids that race; the synchronization concern applies to languages like Java, C#, and C++."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "For most application code, what is usually a better alternative to fetching a Singleton?",
+      "options": [
+        { "id": "a", "text": "Dependency Injection — create one instance and pass it in, keeping dependencies explicit" },
+        { "id": "b", "text": "Copying the object with a shallow clone everywhere" },
+        { "id": "c", "text": "Making every field public and global" },
+        { "id": "d", "text": "Adding more static methods" }
+      ],
+      "answer": "a",
+      "explanation": "Injecting a single instance keeps dependencies visible and lets tests substitute a fake — avoiding Singleton's worst problems."
+    }
+  ]
+}

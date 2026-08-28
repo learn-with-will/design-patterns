@@ -1,0 +1,80 @@
+{
+  "id": "quiz-lesson-22",
+  "lessonId": "lesson-22",
+  "title": "Template Method",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the intent of the Template Method pattern?",
+      "options": [
+        { "id": "a", "text": "Define the skeleton of an algorithm and let subclasses redefine certain steps without changing its structure" },
+        { "id": "b", "text": "Define a family of interchangeable algorithms selected at runtime" },
+        { "id": "c", "text": "Provide a simplified interface to a subsystem" },
+        { "id": "d", "text": "Ensure a class has one instance" }
+      ],
+      "answer": "a",
+      "explanation": "Template Method fixes the skeleton and defers steps to subclasses. Swappable whole algorithms = Strategy; simplify = Facade; one instance = Singleton."
+    },
+    {
+      "id": "q2",
+      "type": "single-choice",
+      "prompt": "What is the difference between an abstract step and a hook?",
+      "options": [
+        { "id": "a", "text": "An abstract step must be implemented by subclasses; a hook has a default that may optionally be overridden" },
+        { "id": "b", "text": "They are the same thing" },
+        { "id": "c", "text": "A hook must be implemented; an abstract step is optional" },
+        { "id": "d", "text": "Hooks can only appear in interfaces" }
+      ],
+      "answer": "a",
+      "explanation": "Abstract steps are required; hooks provide defaults and are optional to override."
+    },
+    {
+      "id": "q3",
+      "type": "single-choice",
+      "prompt": "The Hollywood Principle ('Don't call us, we'll call you') describes:",
+      "options": [
+        { "id": "a", "text": "The base class controls the flow and calls the subclass's steps" },
+        { "id": "b", "text": "Subclasses call the base class to run the algorithm" },
+        { "id": "c", "text": "Objects notify observers of changes" },
+        { "id": "d", "text": "A client selects an algorithm at runtime" }
+      ],
+      "answer": "a",
+      "explanation": "Control is inverted: the base-class template method calls down into the subclass's steps at the right moments."
+    },
+    {
+      "id": "q4",
+      "type": "single-choice",
+      "prompt": "How does Template Method differ from Strategy?",
+      "options": [
+        { "id": "a", "text": "Template Method uses inheritance with a fixed skeleton; Strategy uses composition to swap an entire algorithm at runtime" },
+        { "id": "b", "text": "They are identical" },
+        { "id": "c", "text": "Strategy uses inheritance; Template Method uses composition" },
+        { "id": "d", "text": "Template Method can only run once" }
+      ],
+      "answer": "a",
+      "explanation": "Template Method = inheritance + overridable steps; Strategy = composition + swappable algorithm object."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "What is the main limitation of Template Method?",
+      "options": [
+        { "id": "a", "text": "It relies on inheritance, so variations can't be combined as flexibly as with composition" },
+        { "id": "b", "text": "It always leaks memory" },
+        { "id": "c", "text": "It cannot enforce step order" },
+        { "id": "d", "text": "It requires a database" }
+      ],
+      "answer": "a",
+      "explanation": "Inheritance is rigid; mixing independent variations often calls for composition (Strategy/Decorator)."
+    },
+    {
+      "id": "q6",
+      "type": "fill-blank",
+      "prompt": "The base-class method that holds the fixed algorithm skeleton and should NOT be overridden is called the ____ method.",
+      "answer": ["template", "Template"],
+      "explanation": "The template method defines the invariant skeleton and calls the varying steps."
+    }
+  ]
+}

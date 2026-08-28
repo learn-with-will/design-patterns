@@ -1,0 +1,80 @@
+{
+  "id": "quiz-lesson-24",
+  "lessonId": "lesson-24",
+  "title": "Choosing Patterns & Avoiding Anti-Patterns",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the right starting point for choosing a design pattern?",
+      "options": [
+        { "id": "a", "text": "The problem's forces and the matching pattern's intent" },
+        { "id": "b", "text": "Browsing the catalog for a pattern that looks interesting" },
+        { "id": "c", "text": "Whichever pattern you used most recently" },
+        { "id": "d", "text": "The pattern with the most classes" }
+      ],
+      "answer": "a",
+      "explanation": "Start from the problem, use the category as a map, and match by intent — not by scanning the catalog for something to apply."
+    },
+    {
+      "id": "q2",
+      "type": "fill-blank",
+      "prompt": "The principle warning against building flexibility for imagined future needs is abbreviated ____.",
+      "answer": ["YAGNI", "yagni"],
+      "explanation": "YAGNI — 'You Aren't Gonna Need It' — cautions against speculative complexity, including speculatively applied patterns."
+    },
+    {
+      "id": "q3",
+      "type": "single-choice",
+      "prompt": "What is the 'Golden Hammer' anti-pattern?",
+      "options": [
+        { "id": "a", "text": "Over-applying one favorite pattern to every problem" },
+        { "id": "b", "text": "Using the fastest possible algorithm" },
+        { "id": "c", "text": "Writing code with no patterns at all" },
+        { "id": "d", "text": "Refactoring too rarely" }
+      ],
+      "answer": "a",
+      "explanation": "The Golden Hammer forces a familiar pattern everywhere — 'if all you have is a hammer, everything looks like a nail.'"
+    },
+    {
+      "id": "q4",
+      "type": "single-choice",
+      "prompt": "What does 'refactor toward patterns' mean?",
+      "options": [
+        { "id": "a", "text": "Write simple code first and introduce a pattern when a real recurring pressure appears" },
+        { "id": "b", "text": "Always start every class from a pattern template" },
+        { "id": "c", "text": "Remove all patterns during refactoring" },
+        { "id": "d", "text": "Apply every pattern preemptively to be safe" }
+      ],
+      "answer": "a",
+      "explanation": "Patterns are destinations you refactor toward once a genuine pressure emerges, not starting templates."
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Which of these are patterns that live BEYOND the 23 Gang of Four patterns? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "MVC (Model-View-Controller)" },
+        { "id": "b", "text": "Dependency Injection" },
+        { "id": "c", "text": "Repository" },
+        { "id": "d", "text": "Observer" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "MVC, DI, and Repository are architectural/enterprise patterns (or a technique, for DI). Observer is one of the 23 GoF patterns."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Why can a design pattern sometimes be unnecessary in TypeScript?",
+      "options": [
+        { "id": "a", "text": "Language features (first-class functions, built-in iterators) can provide the pattern's end directly" },
+        { "id": "b", "text": "TypeScript forbids design patterns" },
+        { "id": "c", "text": "Patterns only work in Java" },
+        { "id": "d", "text": "TypeScript automatically applies all 23 patterns" }
+      ],
+      "answer": "a",
+      "explanation": "As Norvig noted, many GoF patterns are simpler or invisible in higher-level languages — e.g. Strategy/Command as functions, Iterator built in."
+    }
+  ]
+}

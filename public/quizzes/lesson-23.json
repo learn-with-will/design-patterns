@@ -1,0 +1,86 @@
+{
+  "id": "quiz-lesson-23",
+  "lessonId": "lesson-23",
+  "title": "Interpreter & Visitor",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the intent of the Interpreter pattern?",
+      "options": [
+        { "id": "a", "text": "Define a representation for a language's grammar plus an interpreter that uses it to interpret sentences" },
+        { "id": "b", "text": "Add operations to an object structure without changing its classes" },
+        { "id": "c", "text": "Ensure a class has one instance" },
+        { "id": "d", "text": "Convert one interface into another" }
+      ],
+      "answer": "a",
+      "explanation": "Interpreter maps grammar rules to classes that evaluate themselves. Adding operations without changing classes = Visitor; one instance = Singleton; converting = Adapter."
+    },
+    {
+      "id": "q2",
+      "type": "single-choice",
+      "prompt": "What is the intent of the Visitor pattern?",
+      "options": [
+        { "id": "a", "text": "Define a new operation over an object structure without changing the element classes" },
+        { "id": "b", "text": "Interpret sentences of a small language" },
+        { "id": "c", "text": "Share intrinsic state across many objects" },
+        { "id": "d", "text": "Provide a simplified interface to a subsystem" }
+      ],
+      "answer": "a",
+      "explanation": "Visitor externalizes operations so elements needn't change. Interpreting = Interpreter; sharing state = Flyweight; simplifying = Facade."
+    },
+    {
+      "id": "q3",
+      "type": "single-choice",
+      "prompt": "What is 'double dispatch', which Visitor relies on?",
+      "options": [
+        { "id": "a", "text": "Selecting behavior based on two types — the element and the visitor" },
+        { "id": "b", "text": "Calling a method twice for safety" },
+        { "id": "c", "text": "Sending the same event to two subjects" },
+        { "id": "d", "text": "Cloning an object two levels deep" }
+      ],
+      "answer": "a",
+      "explanation": "element.accept(visitor) dispatches on the element, then visitor.visitConcrete(this) dispatches on the visitor — two types decide the behavior."
+    },
+    {
+      "id": "q4",
+      "type": "single-choice",
+      "prompt": "What is the 'expression problem' as it applies to Visitor?",
+      "options": [
+        { "id": "a", "text": "Visitor makes adding new operations easy but adding new element types hard (every visitor must change)" },
+        { "id": "b", "text": "Visitors cannot evaluate math expressions" },
+        { "id": "c", "text": "Interpreters can't handle variables" },
+        { "id": "d", "text": "Double dispatch is impossible in TypeScript" }
+      ],
+      "answer": "a",
+      "explanation": "New operation = new visitor (easy); new element type = a new visit method in every visitor (hard)."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "When is Interpreter usually the WRONG choice?",
+      "options": [
+        { "id": "a", "text": "For anything beyond a small, stable grammar — a real language needs a proper parser" },
+        { "id": "b", "text": "For evaluating a tiny boolean filter language" },
+        { "id": "c", "text": "For a simple arithmetic expression" },
+        { "id": "d", "text": "For a small configuration DSL" }
+      ],
+      "answer": "a",
+      "explanation": "A class-per-rule design doesn't scale to complex languages; use a parser or parser generator instead."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Choose Visitor when you expect:",
+      "options": [
+        { "id": "a", "text": "Many operations over a stable set of element types" },
+        { "id": "b", "text": "Frequent addition of new element types" },
+        { "id": "c", "text": "Exactly one operation, forever" },
+        { "id": "d", "text": "A single global instance" }
+      ],
+      "answer": "a",
+      "explanation": "Visitor pays off when operations multiply but element types stay stable; changing types often is where it hurts."
+    }
+  ]
+}

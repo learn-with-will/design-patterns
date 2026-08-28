@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-08",
+  "lessonId": "lesson-08",
+  "title": "Adapter",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the intent of the Adapter pattern?",
+      "options": [
+        { "id": "a", "text": "Convert the interface of a class into another interface clients expect" },
+        { "id": "b", "text": "Add new behavior to an object while keeping its interface" },
+        { "id": "c", "text": "Provide a simplified interface to a complex subsystem" },
+        { "id": "d", "text": "Control access to another object" }
+      ],
+      "answer": "a",
+      "explanation": "Adapter changes one interface into a different expected one. Adding behavior = Decorator; simplifying a subsystem = Facade; controlling access = Proxy."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each Adapter participant to its role.",
+      "pairs": [
+        { "left": "Target", "right": "The interface the client wants to use" },
+        { "left": "Adaptee", "right": "The existing class with an incompatible interface" },
+        { "left": "Adapter", "right": "Implements the target and delegates to the adaptee" }
+      ],
+      "explanation": "The adapter implements the Target and forwards calls to the Adaptee, so the Client only sees the Target."
+    },
+    {
+      "id": "q3",
+      "type": "single-choice",
+      "prompt": "Why do TypeScript adapters typically use composition (an 'object adapter')?",
+      "options": [
+        { "id": "a", "text": "The adapter holds the adaptee, which suits TypeScript's single-inheritance classes" },
+        { "id": "b", "text": "TypeScript forbids interfaces" },
+        { "id": "c", "text": "Because composition is always slower" },
+        { "id": "d", "text": "Because TypeScript supports multiple inheritance of classes" }
+      ],
+      "answer": "a",
+      "explanation": "Class adapters need multiple inheritance; TypeScript classes have single inheritance, so the adapter composes (holds) the adaptee."
+    },
+    {
+      "id": "q4",
+      "type": "fill-blank",
+      "prompt": "Adapter is most useful at integration ____ — third-party libraries or legacy modules whose interface you can't change.",
+      "answer": ["boundaries", "boundary", "Boundaries"],
+      "explanation": "Adapters belong at boundaries you don't own or shouldn't modify, centralizing the translation there."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "How does Adapter differ from Facade?",
+      "options": [
+        { "id": "a", "text": "Adapter makes one interface look like a different expected interface; Facade simplifies a complex subsystem" },
+        { "id": "b", "text": "They are the same pattern" },
+        { "id": "c", "text": "Adapter adds behavior; Facade removes behavior" },
+        { "id": "d", "text": "Adapter controls access; Facade clones objects" }
+      ],
+      "answer": "a",
+      "explanation": "Adapter is about interface conversion; Facade is about presenting a simpler front to many classes."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Which is a sign you might be MISUSING Adapter?",
+      "options": [
+        { "id": "a", "text": "Using it to hide a mismatch between two interfaces you own and could align directly" },
+        { "id": "b", "text": "Using it to wrap a third-party library you can't modify" },
+        { "id": "c", "text": "Keeping the adapter thin and free of business logic" },
+        { "id": "d", "text": "Letting the client depend only on the Target interface" }
+      ],
+      "answer": "a",
+      "explanation": "Adapters are for boundaries you can't change; adapting code you own can just paper over an inconsistent design you should fix."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "quiz-lesson-13",
+  "lessonId": "lesson-13",
+  "title": "Flyweight",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the intent of the Flyweight pattern?",
+      "options": [
+        { "id": "a", "text": "Use sharing to support large numbers of fine-grained objects efficiently" },
+        { "id": "b", "text": "Provide a simplified interface to a subsystem" },
+        { "id": "c", "text": "Ensure a class has one instance" },
+        { "id": "d", "text": "Convert one interface into another" }
+      ],
+      "answer": "a",
+      "explanation": "Flyweight shares common state to save memory across many objects. Simplifying = Facade; one instance = Singleton; converting = Adapter."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each kind of state to its description.",
+      "pairs": [
+        { "left": "Intrinsic state", "right": "Shared, context-independent, stored in the flyweight" },
+        { "left": "Extrinsic state", "right": "Unique per use, kept outside and passed in" }
+      ],
+      "explanation": "Intrinsic state is shared and immutable; extrinsic state (like coordinates) is unique per object and supplied from outside."
+    },
+    {
+      "id": "q3",
+      "type": "single-choice",
+      "prompt": "Why must a flyweight's intrinsic state be immutable?",
+      "options": [
+        { "id": "a", "text": "Because it is shared across many objects, so a change would corrupt all of them" },
+        { "id": "b", "text": "Because TypeScript forbids mutation" },
+        { "id": "c", "text": "Because it makes the objects singletons" },
+        { "id": "d", "text": "Because extrinsic state can't exist otherwise" }
+      ],
+      "answer": "a",
+      "explanation": "Shared state that could change would affect every object referencing the flyweight, so it must be immutable."
+    },
+    {
+      "id": "q4",
+      "type": "single-choice",
+      "prompt": "What does the flyweight factory guarantee?",
+      "options": [
+        { "id": "a", "text": "That flyweights are reused — a new one is created only for a new combination of intrinsic state" },
+        { "id": "b", "text": "That every request returns a brand-new object" },
+        { "id": "c", "text": "That objects are deep-copied" },
+        { "id": "d", "text": "That the subsystem is hidden" }
+      ],
+      "answer": "a",
+      "explanation": "The factory caches and returns shared instances, creating one only when a genuinely new intrinsic combination appears."
+    },
+    {
+      "id": "q5",
+      "type": "fill-blank",
+      "prompt": "Flyweight's explicit goal is to save ____ when there are very many similar objects.",
+      "answer": ["memory", "Memory", "RAM"],
+      "explanation": "It is the one GoF pattern whose stated purpose is efficient memory use across large numbers of objects."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "When is Flyweight the WRONG choice?",
+      "options": [
+        { "id": "a", "text": "When you have only a modest number of objects, or each object's data is unique" },
+        { "id": "b", "text": "When you have millions of objects sharing common data" },
+        { "id": "c", "text": "When memory is the bottleneck" },
+        { "id": "d", "text": "When many objects share the same texture" }
+      ],
+      "answer": "a",
+      "explanation": "Flyweight only pays off at large scale with shared data; with few objects or all-unique state it just adds complexity."
+    }
+  ]
+}
