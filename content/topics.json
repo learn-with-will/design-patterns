@@ -1,0 +1,74 @@
+[
+  {
+    "id": "foundations",
+    "title": "Foundations & Core Principles",
+    "blurb": "Understand what design patterns are, the 1994 GoF catalog, UML notation, and foundational OO principles.",
+    "order": 1
+  },
+  {
+    "id": "solid-principles",
+    "title": "SOLID Principles",
+    "blurb": "Master Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion in TypeScript.",
+    "order": 2
+  },
+  {
+    "id": "creational-factories",
+    "title": "Creational: Factory Patterns",
+    "blurb": "Decouple client code from concrete constructors using Factory Method and Abstract Factory product families.",
+    "order": 3
+  },
+  {
+    "id": "creational-objects",
+    "title": "Creational: Object Assembly",
+    "blurb": "Construct complex objects step-by-step with Builder, clone prototypes, and manage instances with Singleton.",
+    "order": 4
+  },
+  {
+    "id": "structural-adapters",
+    "title": "Structural: Adapters & Bridges",
+    "blurb": "Reconcile incompatible interfaces with Adapter and decouple abstractions from platform implementations with Bridge.",
+    "order": 5
+  },
+  {
+    "id": "structural-composition",
+    "title": "Structural: Composition & Decorators",
+    "blurb": "Compose uniform tree hierarchies with Composite and wrap dynamic behaviors transparently with Decorator.",
+    "order": 6
+  },
+  {
+    "id": "structural-proxies",
+    "title": "Structural: Facades, Flyweights & Proxies",
+    "blurb": "Simplify complex subsystems with Facade, optimize memory with Flyweight, and control access with Proxy.",
+    "order": 7
+  },
+  {
+    "id": "behavioral-requests",
+    "title": "Behavioral: Request Handling",
+    "blurb": "Pass requests down chains with Chain of Responsibility and encapsulate operations as objects with Command.",
+    "order": 8
+  },
+  {
+    "id": "behavioral-coordination",
+    "title": "Behavioral: Coordination & Events",
+    "blurb": "Decouple components with Mediator, capture undo state with Memento, and broadcast updates with Observer.",
+    "order": 9
+  },
+  {
+    "id": "behavioral-algorithms",
+    "title": "Behavioral: Algorithms & State",
+    "blurb": "Interchange runtime algorithms with Strategy, alter behavior on state change with State, and define algorithm skeletons with Template Method.",
+    "order": 10
+  },
+  {
+    "id": "behavioral-traversal",
+    "title": "Behavioral: Traversal & Operations",
+    "blurb": "Traverse complex collections with Iterator, evaluate grammar trees with Interpreter, and execute operations across hierarchies with Visitor.",
+    "order": 11
+  },
+  {
+    "id": "architecture-selection",
+    "title": "Architecture, Selection & Anti-Patterns",
+    "blurb": "Select appropriate patterns based on problem forces, refactor toward patterns incrementally, and eliminate toxic anti-patterns.",
+    "order": 12
+  }
+]

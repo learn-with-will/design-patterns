@@ -1,81 +1,51 @@
-# Design Patterns Learning Portal
+# Design Patterns Learn
 
-A **frontend-only** Design Patterns course: read Markdown lessons, take quizzes, and track
-your progress — all in the browser. No sign-up, no backend.
+The content of the Design Patterns course at <https://learn-with-will.github.io/design-patterns/>: 100 short lessons ("bites") across 12 topics, each teaching one pattern, principle, or technique in 3–5 minutes, plus a bank of 156 quiz questions.
 
-## What this is
+It covers:
+- **Foundations & Core Principles**: GoF catalog, UML diagrams, interfaces, and composition over inheritance.
+- **SOLID Principles**: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.
+- **Creational Patterns**: Factory Method, Abstract Factory, Builder, Prototype, and Singleton.
+- **Structural Patterns**: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, and Proxy.
+- **Behavioral Patterns**: Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Interpreter, and Visitor.
+- **Architecture & Anti-Patterns**: Pattern selection heuristics, refactoring toward patterns, YAGNI, God Object, Spaghetti Code, Golden Hammer, and Lava Flow.
 
-The portal shell is built with React 19, Vite, TypeScript, React Router, Tailwind CSS v4,
-`marked`, and PrismJS. It renders a **24-lesson curriculum** that takes you from "what is a design
-pattern?" and the **SOLID** principles through all **23 Gang of Four (GoF) patterns** — the five
-creational, seven structural, and eleven behavioral patterns — finishing with how to choose a
-pattern, refactor toward one, and avoid over-engineering. Every code example is written in
-**TypeScript**, in plain, welcoming English, and verified against primary sources (see **Sources**
-below).
+This repository holds **content only**. The site itself (lesson reader, quizzes, progress, optional sign-in) is the shared [course shell](https://github.com/learn-with-will/course-shell), which every course uses.
 
-Progress, bookmarks, and quiz scores live in `localStorage` under `design-patterns-learning-*` keys,
-so nothing leaves your machine.
-
-## Run it locally
-
-```bash
-npm install
-npm run dev      # start the dev server
-npm run build    # type-check + production build into dist/
-npm run preview  # serve the production build
+```text
+course.json              name, brand colours, home page copy, code languages
+content/topics.json      the 12 topics
+content/lessons/*.md     one bite per file (100 bites)
+content/legacy.json      old long-lesson URLs → the bites that replaced them
+quiz/questions.json      the question bank (156 questions)
 ```
 
-## How the content works
+## Working on the course
 
-The app is **data-driven** — adding a lesson needs no code changes:
+Clone the shell next to this folder, then run its commands with this folder as the argument:
 
-1. Write the lesson Markdown in `public/content/<level>/<slug>.md` with YAML front-matter
-   (including a `summary`).
-2. Add a quiz at `public/quizzes/lesson-NN.json`.
-3. Regenerate `public/content/course-manifest.json` from the front-matter (the manifest is
-   generated, so it can't drift).
+```bash
+git clone https://github.com/learn-with-will/course-shell.git ../course-shell
+cd ../course-shell
+npm ci
+npm run dev -- ../design-patterns                 # live preview at http://localhost:4200
+npm run validate -- ../design-patterns --strict   # strict release validation
+```
 
-> **Code fences** must declare one of the highlighted languages: `typescript` (the primary language
-> for every pattern example), `bash` (the occasional shell command), `json` (small config snippets),
-> or `text` (console output, UML sketches, directory trees); see `src/core/prism.ts`.
+Node 22.18 or later is required.
 
-## Curriculum
+## Adding a lesson
 
-**Beginner — foundations & creational patterns:** what are design patterns? · SOLID principles ·
-Factory Method · Abstract Factory · Builder · Prototype · Singleton · Adapter.
+1. Create `content/lessons/<slug>.md` with front-matter (`slug`, `title`, `topic`, `kind`, `summary`, `tags`, `related`) and the standard sections.
+2. Add questions for it to `quiz/questions.json` with `"topic"` and `"lesson"`.
+3. Run `npm run validate -- ../design-patterns --strict` from the shell folder.
 
-**Intermediate — structural & first behavioral patterns:** Bridge · Composite · Decorator · Facade ·
-Flyweight · Proxy · Chain of Responsibility · Command.
+The rules (length limits, which visual fits which kind of information, the diagram syntax) are in the shell's [CONTENT_GUIDE.md](https://github.com/learn-with-will/course-shell/blob/main/CONTENT_GUIDE.md).
 
-**Advanced — behavioral patterns & putting it together:** Iterator · Mediator · Memento · Observer ·
-Strategy & State · Template Method · Interpreter & Visitor · choosing patterns & anti-patterns.
+## Accuracy
 
-## Accuracy: no hallucination
+Design pattern intent, structure, participants, and trade-offs are strictly aligned with Gamma, Helm, Johnson, and Vlissides (*Design Patterns: Elements of Reusable Object-Oriented Software*, Addison-Wesley, 1994) and modern TypeScript object-oriented best practices.
 
-Every definition, intent, and claim is verified against primary sources. The per-lesson authoring
-contract lives in `prompts/design-patterns-authoring-prompt.md`, and the phase-by-phase overview in
-`prompts/design-patterns-study-pathway.md`.
+## Deployment
 
-**Sources:**
-
-- **_Design Patterns: Elements of Reusable Object-Oriented Software_** — Gamma, Helm, Johnson &
-  Vlissides (the "Gang of Four", 1994) — the canonical catalog of the 23 patterns.
-- **Refactoring.Guru** — <https://refactoring.guru/design-patterns> — modern explanations with
-  TypeScript examples.
-- **SourceMaking** — <https://sourcemaking.com/design_patterns> — pattern catalog and anti-patterns.
-- **_Head First Design Patterns_** — Freeman & Robson (O'Reilly) — a beginner-friendly companion.
-- **Robert C. Martin** — the SOLID principles and _Clean Architecture_.
-- **Martin Fowler** — <https://martinfowler.com/> and _Patterns of Enterprise Application
-  Architecture_ (e.g. Inversion of Control vs Dependency Injection).
-- **The TypeScript Handbook** — <https://www.typescriptlang.org/docs/> — for idiomatic TypeScript
-  (interfaces, abstract classes, generics).
-
-## Deploying
-
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds with
-`BASE_PATH=/<repo>/` and publishes `dist/` to GitHub Pages.
-
----
-
-React 19 · Vite · TypeScript · React Router · Tailwind CSS v4 · marked · PrismJS ·
-localStorage.
+Pushing to `main` runs `.github/workflows/deploy.yml`, which calls the shell's reusable workflow: it validates this course in strict mode, builds it with the latest shell, and publishes it to GitHub Pages.

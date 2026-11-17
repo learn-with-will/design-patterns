@@ -1,0 +1,4039 @@
+[
+  {
+    "id": "foundations-q01",
+    "topic": "foundations",
+    "lesson": "what-is-a-design-pattern",
+    "type": "single-choice",
+    "prompt": "Which best describes a design pattern?",
+    "explanation": "A pattern is a general, reusable solution you adapt — not copy-paste code, not a library, and not an algorithm (which computes a result rather than arranging responsibilities).",
+    "options": [
+      {
+        "id": "a",
+        "text": "A named, reusable solution to a recurring design problem that you adapt to your situation"
+      },
+      {
+        "id": "b",
+        "text": "A snippet of code you copy and paste unchanged"
+      },
+      {
+        "id": "c",
+        "text": "A library you install from npm"
+      },
+      {
+        "id": "d",
+        "text": "An algorithm like quicksort"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "foundations-q02",
+    "topic": "foundations",
+    "lesson": "gof-categories-and-catalog",
+    "type": "match-pair",
+    "prompt": "Match each GoF category to what it is mainly about.",
+    "explanation": "GoF sorts the 23 patterns into creational (how objects are made), structural (how they're assembled), and behavioral (how they interact).",
+    "pairs": [
+      {
+        "left": "Creational",
+        "right": "Object creation"
+      },
+      {
+        "left": "Structural",
+        "right": "Composition of classes and objects"
+      },
+      {
+        "left": "Behavioral",
+        "right": "Communication between objects"
+      }
+    ]
+  },
+  {
+    "id": "foundations-q03",
+    "topic": "foundations",
+    "lesson": "what-is-a-design-pattern",
+    "type": "multiple-choice",
+    "prompt": "Which statements about design patterns are TRUE? Select all that apply.",
+    "explanation": "Patterns are a shared vocabulary, carry trade-offs, and are adaptable templates. Applying as many as possible is over-engineering — patterns are not a quality badge.",
+    "options": [
+      {
+        "id": "a",
+        "text": "They give a team a shared vocabulary for design"
+      },
+      {
+        "id": "b",
+        "text": "They always make code better, so use as many as possible"
+      },
+      {
+        "id": "c",
+        "text": "They come with consequences and trade-offs"
+      },
+      {
+        "id": "d",
+        "text": "They describe an arrangement you adapt, not exact code"
+      }
+    ],
+    "answer": [
+      "a",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "id": "foundations-q04",
+    "topic": "foundations",
+    "lesson": "design-principles-interfaces-composition",
+    "type": "fill-blank",
+    "prompt": "Complete the GoF principle: \"Program to an ____, not an implementation.\"",
+    "explanation": "Depending on an interface (what an object can do) rather than a concrete class (how it does it) lets you swap implementations freely.",
+    "answer": [
+      "interface",
+      "Interface"
+    ]
+  },
+  {
+    "id": "foundations-q05",
+    "topic": "foundations",
+    "lesson": "gof-categories-and-catalog",
+    "type": "single-choice",
+    "prompt": "Roughly how many patterns did the Gang of Four catalog, and in what year?",
+    "explanation": "The 1994 GoF book cataloged 23 patterns. (Christopher Alexander's architectural book that inspired the idea was 1977.)",
+    "options": [
+      {
+        "id": "a",
+        "text": "23 patterns, in 1994"
+      },
+      {
+        "id": "b",
+        "text": "10 patterns, in 1977"
+      },
+      {
+        "id": "c",
+        "text": "50 patterns, in 2005"
+      },
+      {
+        "id": "d",
+        "text": "23 patterns, in 2015"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "foundations-q06",
+    "topic": "foundations",
+    "lesson": "when-to-use-patterns",
+    "type": "single-choice",
+    "prompt": "A developer wraps a one-line config read in three interfaces, an Abstract Factory, and a Singleton 'to be enterprise-ready.' What is this an example of?",
+    "explanation": "Patterns add classes and indirection. Applying them where simple code would do adds cost with no benefit — the definition of over-engineering.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Over-engineering — paying a pattern's cost with no matching benefit"
+      },
+      {
+        "id": "b",
+        "text": "Programming to an interface"
+      },
+      {
+        "id": "c",
+        "text": "Favoring composition over inheritance"
+      },
+      {
+        "id": "d",
+        "text": "A behavioral pattern"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "foundations-q07",
+    "topic": "foundations",
+    "lesson": "uml-basics-for-patterns",
+    "type": "single-choice",
+    "prompt": "In a UML class diagram, which arrow style represents an implementation/realization relationship from a class to an interface?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A dashed line with an open, hollow triangle pointing to the interface"
+      },
+      {
+        "id": "b",
+        "text": "A solid line with a solid diamond"
+      },
+      {
+        "id": "c",
+        "text": "A dashed line with a simple open arrowhead"
+      },
+      {
+        "id": "d",
+        "text": "A solid bold line with no arrowheads"
+      }
+    ],
+    "answer": "a",
+    "explanation": "In UML, a dashed line with a hollow triangle represents realization/implementation of an interface. A solid line with a hollow triangle represents class inheritance/generalization."
+  },
+  {
+    "id": "foundations-q08",
+    "topic": "foundations",
+    "lesson": "design-principles-interfaces-composition",
+    "type": "single-choice",
+    "prompt": "Why does the Gang of Four advocate \"Favor object composition over class inheritance\"?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Composition allows behaviors to be swapped dynamically at runtime and avoids rigid compile-time coupling"
+      },
+      {
+        "id": "b",
+        "text": "Inheritance is deprecated and forbidden in modern TypeScript"
+      },
+      {
+        "id": "c",
+        "text": "Composition uses less memory than inheritance hierarchies"
+      },
+      {
+        "id": "d",
+        "text": "Inheritance prevents subclasses from accessing public methods"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Inheritance binds behavior at compile time and breaks encapsulation (white-box reuse). Composition delegates to injected interfaces, enabling runtime swapping (black-box reuse)."
+  },
+  {
+    "id": "foundations-q09",
+    "topic": "foundations",
+    "lesson": "when-to-use-patterns",
+    "type": "multiple-choice",
+    "prompt": "Which of the following conditions indicate that introducing a design pattern is justified? Select all that apply.",
+    "options": [
+      {
+        "id": "a",
+        "text": "A concrete code smell or variation point has emerged in production code"
+      },
+      {
+        "id": "b",
+        "text": "You want your application architecture to look more enterprise-ready before writing business logic"
+      },
+      {
+        "id": "c",
+        "text": "Requirements demand swapping algorithmic implementations or data sources dynamically"
+      },
+      {
+        "id": "d",
+        "text": "Multiple classes share duplicate structural wiring or recursive hierarchies"
+      }
+    ],
+    "answer": [
+      "a",
+      "c",
+      "d"
+    ],
+    "explanation": "Patterns should solve concrete pressures: dynamic swapping, recursive hierarchies, or real code smells. Applying patterns speculatively before requirements exist is over-engineering."
+  },
+  {
+    "id": "foundations-q10",
+    "topic": "foundations",
+    "lesson": "uml-basics-for-patterns",
+    "type": "single-choice",
+    "prompt": "In UML notation, what is the key difference between Aggregation and Composition?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Composition (solid diamond) implies strict ownership where child parts cannot exist without the parent container; Aggregation (hollow diamond) implies a weaker whole-part association where parts outlive the container"
+      },
+      {
+        "id": "b",
+        "text": "Aggregation implies strict ownership, while Composition is temporary"
+      },
+      {
+        "id": "c",
+        "text": "Aggregation only applies to interfaces; Composition only applies to abstract classes"
+      },
+      {
+        "id": "d",
+        "text": "Composition is drawn with a dashed arrow; Aggregation is drawn with a solid line"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Composition is strong ownership (death of parent deletes children, represented by a filled diamond). Aggregation is weak ownership (parts exist independently, represented by an unfilled hollow diamond)."
+  },
+  {
+    "id": "solid-principles-q01",
+    "topic": "solid-principles",
+    "lesson": "single-responsibility-principle",
+    "type": "match-pair",
+    "prompt": "Match each SOLID letter to its principle.",
+    "explanation": "SOLID stands for Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.",
+    "pairs": [
+      {
+        "left": "S",
+        "right": "Single Responsibility"
+      },
+      {
+        "left": "O",
+        "right": "Open/Closed"
+      },
+      {
+        "left": "L",
+        "right": "Liskov Substitution"
+      },
+      {
+        "left": "I",
+        "right": "Interface Segregation"
+      },
+      {
+        "left": "D",
+        "right": "Dependency Inversion"
+      }
+    ]
+  },
+  {
+    "id": "solid-principles-q02",
+    "topic": "solid-principles",
+    "lesson": "open-closed-principle",
+    "type": "single-choice",
+    "prompt": "The Open/Closed Principle says software entities should be:",
+    "explanation": "OCP means you add new behavior by adding new code, without editing existing, already-tested code.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Open for extension but closed for modification"
+      },
+      {
+        "id": "b",
+        "text": "Open source but closed to outside contributors"
+      },
+      {
+        "id": "c",
+        "text": "Closed for extension but open for modification"
+      },
+      {
+        "id": "d",
+        "text": "Always rewritten when requirements change"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "solid-principles-q03",
+    "topic": "solid-principles",
+    "lesson": "liskov-substitution-principle",
+    "type": "single-choice",
+    "prompt": "A Penguin class extends Bird but overrides fly() to throw an error. Which principle does this most clearly violate?",
+    "explanation": "A Penguin can't stand in for a Bird wherever fly() is called, so it breaks substitutability — an LSP violation the compiler won't catch.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Liskov Substitution Principle"
+      },
+      {
+        "id": "b",
+        "text": "Single Responsibility Principle"
+      },
+      {
+        "id": "c",
+        "text": "Interface Segregation Principle"
+      },
+      {
+        "id": "d",
+        "text": "Open/Closed Principle"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "solid-principles-q04",
+    "topic": "solid-principles",
+    "lesson": "dependency-inversion-principle",
+    "type": "fill-blank",
+    "prompt": "The 'D' in SOLID is the Dependency ____ Principle: depend on abstractions, not concretions.",
+    "explanation": "Dependency Inversion: high-level code and low-level details both depend on an abstraction in the middle.",
+    "answer": [
+      "Inversion",
+      "inversion"
+    ]
+  },
+  {
+    "id": "solid-principles-q05",
+    "topic": "solid-principles",
+    "lesson": "dip-vs-di-vs-ioc",
+    "type": "multiple-choice",
+    "prompt": "Which statements about Dependency Inversion (DIP), Dependency Injection (DI), and Inversion of Control (IoC) are TRUE? Select all that apply.",
+    "explanation": "DIP is the principle, DI is a technique that achieves it, and IoC is the broader idea — they are related but distinct. DI is not one of the 23 GoF patterns.",
+    "options": [
+      {
+        "id": "a",
+        "text": "DIP is a principle: depend on abstractions"
+      },
+      {
+        "id": "b",
+        "text": "DI is a technique: pass dependencies in instead of creating them internally"
+      },
+      {
+        "id": "c",
+        "text": "DI, DIP, and IoC are three names for exactly the same thing"
+      },
+      {
+        "id": "d",
+        "text": "DI is a Gang of Four design pattern"
+      }
+    ],
+    "answer": [
+      "a",
+      "b"
+    ]
+  },
+  {
+    "id": "solid-principles-q06",
+    "topic": "solid-principles",
+    "lesson": "interface-segregation-principle",
+    "type": "single-choice",
+    "prompt": "Splitting a fat AllInOne { print, scan, fax } interface into separate Printer and Scanner interfaces follows which principle?",
+    "explanation": "ISP says prefer small, client-specific interfaces so a class isn't forced to implement methods (like fax) it doesn't use.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Interface Segregation Principle"
+      },
+      {
+        "id": "b",
+        "text": "Liskov Substitution Principle"
+      },
+      {
+        "id": "c",
+        "text": "Single Responsibility Principle"
+      },
+      {
+        "id": "d",
+        "text": "Dependency Inversion Principle"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "solid-principles-q07",
+    "topic": "solid-principles",
+    "lesson": "single-responsibility-principle",
+    "type": "single-choice",
+    "prompt": "According to Robert C. Martin, what is the precise definition of 'responsibility' in the Single Responsibility Principle (SRP)?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A class should have one, and only one, reason to change (meaning it is accountable to only one actor or stakeholder)"
+      },
+      {
+        "id": "b",
+        "text": "A class must have only one public method"
+      },
+      {
+        "id": "c",
+        "text": "A class must not import more than one external module"
+      },
+      {
+        "id": "d",
+        "text": "A class should perform only one mathematical operation per turn"
+      }
+    ],
+    "answer": "a",
+    "explanation": "SRP defines a responsibility as a reason to change, anchored to the business actor or stakeholder who requests that change (e.g., accounting vs. human resources)."
+  },
+  {
+    "id": "solid-principles-q08",
+    "topic": "solid-principles",
+    "lesson": "dip-vs-di-vs-ioc",
+    "type": "single-choice",
+    "prompt": "How does an Inversion of Control (IoC) container differ from direct Dependency Injection (DI)?",
+    "options": [
+      {
+        "id": "a",
+        "text": "An IoC container automates the lifecycle, instantiation, and resolution of dependencies across an application graph"
+      },
+      {
+        "id": "b",
+        "text": "IoC containers eliminate the need for interfaces"
+      },
+      {
+        "id": "c",
+        "text": "DI requires an IoC container, while DIP does not"
+      },
+      {
+        "id": "d",
+        "text": "IoC containers execute code synchronously without inversion"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Dependency Injection is the technique of passing dependencies into a constructor or method. An IoC container is an automated framework mechanism that manages instantiation, scoping, and resolution across the object graph."
+  },
+  {
+    "id": "solid-principles-q09",
+    "topic": "solid-principles",
+    "lesson": "liskov-substitution-principle",
+    "type": "multiple-choice",
+    "prompt": "Which of the following violate the Liskov Substitution Principle (LSP)? Select all that apply.",
+    "options": [
+      {
+        "id": "a",
+        "text": "A subclass strengthens preconditions, requiring stricter parameters than the base interface"
+      },
+      {
+        "id": "b",
+        "text": "A subclass weakens postconditions, failing to guarantee state conditions established by the base class"
+      },
+      {
+        "id": "c",
+        "text": "A subclass overrides a method to throw an unsupported operation error"
+      },
+      {
+        "id": "d",
+        "text": "A subclass returns a more specific subtype (covariant return type) of the interface return type"
+      }
+    ],
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ],
+    "explanation": "LSP requires that subtypes must not strengthen preconditions, must not weaken postconditions, and must not throw unexpected exceptions for valid base-type inputs. Covariant return types are permitted and safe."
+  },
+  {
+    "id": "solid-principles-q10",
+    "topic": "solid-principles",
+    "lesson": "open-closed-principle",
+    "type": "single-choice",
+    "prompt": "How do Strategy and Decorator design patterns help fulfill the Open/Closed Principle (OCP)?",
+    "options": [
+      {
+        "id": "a",
+        "text": "They allow new algorithms or behaviors to be introduced by adding new classes without editing existing client or core logic"
+      },
+      {
+        "id": "b",
+        "text": "They convert private fields into public fields"
+      },
+      {
+        "id": "c",
+        "text": "They merge multiple interfaces into a single omnibus interface"
+      },
+      {
+        "id": "d",
+        "text": "They eliminate polymorphism in favor of switch statements"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Strategy and Decorator keep existing classes closed to modification while keeping the system open for extension by injecting new polymorphic strategy or decorator classes."
+  },
+  {
+    "id": "creational-factories-q01",
+    "topic": "creational-factories",
+    "lesson": "factory-method-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Factory Method pattern?",
+    "explanation": "Factory Method defers instantiation of a single product to subclasses. (One instance = Singleton; families = Abstract Factory; runtime responsibilities = Decorator.)",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define a method for creating an object but let subclasses decide which concrete class to instantiate"
+      },
+      {
+        "id": "b",
+        "text": "Ensure a class has only one instance"
+      },
+      {
+        "id": "c",
+        "text": "Create whole families of related objects at once"
+      },
+      {
+        "id": "d",
+        "text": "Add responsibilities to an object at runtime"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-factories-q02",
+    "topic": "creational-factories",
+    "lesson": "factory-method-implementation",
+    "type": "single-choice",
+    "prompt": "Which mechanism does Factory Method use to vary which product is created?",
+    "explanation": "A concrete creator subclass overrides the factory method to return its product. (Composition is how Abstract Factory varies products; cloning is Prototype.)",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inheritance — a subclass overrides the factory method"
+      },
+      {
+        "id": "b",
+        "text": "Composition — you hold a separate factory object"
+      },
+      {
+        "id": "c",
+        "text": "Reflection over class names"
+      },
+      {
+        "id": "d",
+        "text": "Cloning an existing instance"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-factories-q03",
+    "topic": "creational-factories",
+    "lesson": "factory-method-implementation",
+    "type": "fill-blank",
+    "prompt": "In Factory Method, the higher-level code should depend on the Product ____ rather than a concrete product class.",
+    "explanation": "Returning and using the Product interface keeps the creator decoupled from concrete products.",
+    "answer": [
+      "interface",
+      "Interface",
+      "abstraction"
+    ]
+  },
+  {
+    "id": "creational-factories-q04",
+    "topic": "creational-factories",
+    "lesson": "factory-method-tradeoffs",
+    "type": "multiple-choice",
+    "prompt": "Which are genuine benefits of Factory Method? Select all that apply.",
+    "explanation": "Factory Method decouples use from creation, supports OCP, and centralizes creation. Guaranteeing a single instance is Singleton, not Factory Method.",
+    "options": [
+      {
+        "id": "a",
+        "text": "It decouples the code that uses a product from the code that creates it"
+      },
+      {
+        "id": "b",
+        "text": "Adding a new product can be done by adding a subclass, without editing existing code (OCP)"
+      },
+      {
+        "id": "c",
+        "text": "It guarantees only one product instance ever exists"
+      },
+      {
+        "id": "d",
+        "text": "It centralizes creation logic in one method"
+      }
+    ],
+    "answer": [
+      "a",
+      "b",
+      "d"
+    ]
+  },
+  {
+    "id": "creational-factories-q05",
+    "topic": "creational-factories",
+    "lesson": "parameterized-factory-methods",
+    "type": "single-choice",
+    "prompt": "In TypeScript, what is a common lighter-weight alternative to a Factory Method subclass?",
+    "explanation": "Because functions are first-class in TS, a factory function can carry the creation decision without defining a new subclass.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Passing a factory function that returns the product"
+      },
+      {
+        "id": "b",
+        "text": "Using a global variable"
+      },
+      {
+        "id": "c",
+        "text": "Deep-cloning the creator"
+      },
+      {
+        "id": "d",
+        "text": "Making every field public"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-factories-q06",
+    "topic": "creational-factories",
+    "lesson": "factory-method-tradeoffs",
+    "type": "single-choice",
+    "prompt": "What is the main downside of Factory Method?",
+    "explanation": "You may create a whole subclass to vary one product, which is overkill when a parameter or factory function would do.",
+    "options": [
+      {
+        "id": "a",
+        "text": "It can multiply subclasses, sometimes just to change one product"
+      },
+      {
+        "id": "b",
+        "text": "It makes objects impossible to test"
+      },
+      {
+        "id": "c",
+        "text": "It requires a database"
+      },
+      {
+        "id": "d",
+        "text": "It always slows programs down"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-factories-q07",
+    "topic": "creational-factories",
+    "lesson": "abstract-factory-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Abstract Factory pattern?",
+    "explanation": "Abstract Factory is about families of related products. Single product via subclass = Factory Method; step-by-step = Builder; one instance = Singleton.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Provide an interface for creating families of related objects without specifying their concrete classes"
+      },
+      {
+        "id": "b",
+        "text": "Let subclasses decide which single class to instantiate"
+      },
+      {
+        "id": "c",
+        "text": "Build a complex object step by step"
+      },
+      {
+        "id": "d",
+        "text": "Restrict a class to a single instance"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-factories-q08",
+    "topic": "creational-factories",
+    "lesson": "abstract-factory-vs-factory-method",
+    "type": "single-choice",
+    "prompt": "The KEY difference between Abstract Factory and Factory Method is:",
+    "explanation": "Abstract Factory = family + composition (hold a factory object); Factory Method = one product + inheritance (override a method).",
+    "options": [
+      {
+        "id": "a",
+        "text": "Abstract Factory creates a family of products via composition; Factory Method creates one product via inheritance"
+      },
+      {
+        "id": "b",
+        "text": "They are two names for the same pattern"
+      },
+      {
+        "id": "c",
+        "text": "Abstract Factory uses inheritance; Factory Method uses composition"
+      },
+      {
+        "id": "d",
+        "text": "Abstract Factory can only create one product"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-factories-q09",
+    "topic": "creational-factories",
+    "lesson": "abstract-factory-families",
+    "type": "fill-blank",
+    "prompt": "Abstract Factory produces a matched ____ of related products that are meant to be used together.",
+    "explanation": "The point is a consistent family/set — e.g. all-light or all-dark widgets — so incompatible products can't be mixed.",
+    "answer": [
+      "family",
+      "Family",
+      "set"
+    ]
+  },
+  {
+    "id": "creational-factories-q10",
+    "topic": "creational-factories",
+    "lesson": "abstract-factory-tradeoffs",
+    "type": "single-choice",
+    "prompt": "What is the main weakness of Abstract Factory?",
+    "explanation": "The set of product kinds is baked into the factory interface, so introducing a new kind ripples through all factories.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Adding a new KIND of product forces changes to the factory interface and every concrete factory"
+      },
+      {
+        "id": "b",
+        "text": "It cannot guarantee product consistency"
+      },
+      {
+        "id": "c",
+        "text": "It makes objects impossible to swap"
+      },
+      {
+        "id": "d",
+        "text": "It only works with a database"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-factories-q11",
+    "topic": "creational-factories",
+    "lesson": "abstract-factory-families",
+    "type": "match-pair",
+    "prompt": "Match each concrete factory to the products it should create.",
+    "explanation": "Each concrete factory produces exactly one internally consistent family, so pieces always match.",
+    "pairs": [
+      {
+        "left": "LightFactory",
+        "right": "LightButton + LightCheckbox"
+      },
+      {
+        "left": "DarkFactory",
+        "right": "DarkButton + DarkCheckbox"
+      }
+    ]
+  },
+  {
+    "id": "creational-factories-q12",
+    "topic": "creational-factories",
+    "lesson": "abstract-factory-intent",
+    "type": "multiple-choice",
+    "prompt": "When is Abstract Factory a good fit? Select all that apply.",
+    "explanation": "Abstract Factory shines when families vary but the set of product kinds is stable. Frequently adding new product kinds is exactly where it becomes rigid.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Products must be used together and mixing them would be a bug"
+      },
+      {
+        "id": "b",
+        "text": "You want to swap an entire set of products at once"
+      },
+      {
+        "id": "c",
+        "text": "You frequently add brand-new kinds of product to the set"
+      },
+      {
+        "id": "d",
+        "text": "The set of product kinds is stable, but the families vary"
+      }
+    ],
+    "answer": [
+      "a",
+      "b",
+      "d"
+    ]
+  },
+  {
+    "id": "creational-objects-q01",
+    "topic": "creational-objects",
+    "lesson": "builder-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Builder pattern?",
+    "explanation": "Builder is about constructing a complex object in steps. One instance = Singleton; cloning = Prototype; converting interfaces = Adapter.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Separate the step-by-step construction of a complex object from its final representation"
+      },
+      {
+        "id": "b",
+        "text": "Guarantee a class has only one instance"
+      },
+      {
+        "id": "c",
+        "text": "Create a new object by cloning an existing one"
+      },
+      {
+        "id": "d",
+        "text": "Convert one interface into another"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q02",
+    "topic": "creational-objects",
+    "lesson": "step-by-step-builder",
+    "type": "fill-blank",
+    "prompt": "Builder replaces the ____ constructor smell — long, overloaded constructors with many positional parameters.",
+    "explanation": "The telescoping constructor (growing overloaded parameter lists) is exactly what Builder is meant to remove.",
+    "answer": [
+      "telescoping",
+      "Telescoping"
+    ]
+  },
+  {
+    "id": "creational-objects-q03",
+    "topic": "creational-objects",
+    "lesson": "fluent-builder-in-typescript",
+    "type": "single-choice",
+    "prompt": "In a fluent builder, why does each step method return `this`?",
+    "explanation": "Returning `this` lets you write builder.withA().withB().build() as one readable chain.",
+    "options": [
+      {
+        "id": "a",
+        "text": "So the calls can be chained together"
+      },
+      {
+        "id": "b",
+        "text": "To make the object a singleton"
+      },
+      {
+        "id": "c",
+        "text": "To deep-copy the object"
+      },
+      {
+        "id": "d",
+        "text": "To hide the constructor"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q04",
+    "topic": "creational-objects",
+    "lesson": "builder-intent",
+    "type": "single-choice",
+    "prompt": "How does Builder differ from a Factory?",
+    "explanation": "The distinguishing feature is step-by-step construction (builder) versus a single creation call (factory).",
+    "options": [
+      {
+        "id": "a",
+        "text": "A factory returns an object in one call; a builder assembles it over several named steps"
+      },
+      {
+        "id": "b",
+        "text": "They are identical"
+      },
+      {
+        "id": "c",
+        "text": "A builder can only make one instance ever"
+      },
+      {
+        "id": "d",
+        "text": "A factory always uses inheritance and a builder never does"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q05",
+    "topic": "creational-objects",
+    "lesson": "builder-director-and-variants",
+    "type": "single-choice",
+    "prompt": "What is the optional Director's job in the GoF Builder?",
+    "explanation": "A Director encapsulates a construction recipe so it can be reused; it's optional and often omitted.",
+    "options": [
+      {
+        "id": "a",
+        "text": "It runs a fixed sequence of builder steps (a reusable recipe)"
+      },
+      {
+        "id": "b",
+        "text": "It stores the single global instance"
+      },
+      {
+        "id": "c",
+        "text": "It converts the product to another interface"
+      },
+      {
+        "id": "d",
+        "text": "It notifies observers when the product changes"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q06",
+    "topic": "creational-objects",
+    "lesson": "builder-director-and-variants",
+    "type": "single-choice",
+    "prompt": "When is Builder the WRONG choice?",
+    "explanation": "For simple objects a constructor or literal is clearer; Builder's ceremony only pays off for complex construction.",
+    "options": [
+      {
+        "id": "a",
+        "text": "For a simple object with only a couple of fields"
+      },
+      {
+        "id": "b",
+        "text": "For an object with many optional parts"
+      },
+      {
+        "id": "c",
+        "text": "When you want validation centralized in build()"
+      },
+      {
+        "id": "d",
+        "text": "When you want an immutable result"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q07",
+    "topic": "creational-objects",
+    "lesson": "prototype-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Prototype pattern?",
+    "explanation": "Prototype creates objects by cloning. One instance = Singleton; step-by-step = Builder; simplified interface = Facade.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Create new objects by copying an existing prototypical instance"
+      },
+      {
+        "id": "b",
+        "text": "Ensure only one instance of a class exists"
+      },
+      {
+        "id": "c",
+        "text": "Build a complex object step by step"
+      },
+      {
+        "id": "d",
+        "text": "Provide a simplified interface to a subsystem"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q08",
+    "topic": "creational-objects",
+    "lesson": "shallow-vs-deep-cloning",
+    "type": "single-choice",
+    "prompt": "What is the difference between a shallow copy and a deep copy?",
+    "explanation": "Shallow duplicates only the top level (nested objects are shared); deep duplicates all levels.",
+    "options": [
+      {
+        "id": "a",
+        "text": "A shallow copy shares nested objects; a deep copy duplicates every level so nothing is shared"
+      },
+      {
+        "id": "b",
+        "text": "A shallow copy is always slower than a deep copy"
+      },
+      {
+        "id": "c",
+        "text": "A deep copy shares nested objects; a shallow copy duplicates everything"
+      },
+      {
+        "id": "d",
+        "text": "They are the same thing"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q09",
+    "topic": "creational-objects",
+    "lesson": "shallow-vs-deep-cloning",
+    "type": "single-choice",
+    "prompt": "Why is a clone() that does `Object.assign(new Thing(), this)` often a bug?",
+    "explanation": "Top-level assignment leaves nested references shared, so mutating one 'copy' changes the other.",
+    "options": [
+      {
+        "id": "a",
+        "text": "It is a shallow copy, so the clone shares the original's nested objects and arrays"
+      },
+      {
+        "id": "b",
+        "text": "It always throws an exception"
+      },
+      {
+        "id": "c",
+        "text": "It creates two singletons"
+      },
+      {
+        "id": "d",
+        "text": "It permanently freezes the original"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q10",
+    "topic": "creational-objects",
+    "lesson": "prototype-registry",
+    "type": "multiple-choice",
+    "prompt": "Which statements about structuredClone() are TRUE? Select all that apply.",
+    "explanation": "structuredClone deep-copies data but drops methods/prototype (returns a plain object) and can't clone functions.",
+    "options": [
+      {
+        "id": "a",
+        "text": "It performs a deep copy of plain data"
+      },
+      {
+        "id": "b",
+        "text": "It preserves a class instance's methods and prototype"
+      },
+      {
+        "id": "c",
+        "text": "It cannot clone functions"
+      },
+      {
+        "id": "d",
+        "text": "It returns a plain object when given a class instance"
+      }
+    ],
+    "answer": [
+      "a",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "id": "creational-objects-q11",
+    "topic": "creational-objects",
+    "lesson": "prototype-vs-js-prototypes",
+    "type": "single-choice",
+    "prompt": "How does the Prototype pattern relate to JavaScript's prototypal inheritance?",
+    "explanation": "The Prototype pattern is about cloning; JS prototypal inheritance is a language feature for sharing methods. Same word, different concept.",
+    "options": [
+      {
+        "id": "a",
+        "text": "They share a name but are different ideas: the pattern copies objects, prototypal inheritance shares behavior via a linked prototype"
+      },
+      {
+        "id": "b",
+        "text": "They are exactly the same mechanism"
+      },
+      {
+        "id": "c",
+        "text": "Prototypal inheritance is a way to guarantee a single instance"
+      },
+      {
+        "id": "d",
+        "text": "The pattern only works in languages without prototypes"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q12",
+    "topic": "creational-objects",
+    "lesson": "prototype-intent",
+    "type": "single-choice",
+    "prompt": "When is Prototype especially useful?",
+    "explanation": "Cloning a prepared prototype is cheaper than rebuilding, and avoids a factory subclass per configuration.",
+    "options": [
+      {
+        "id": "a",
+        "text": "When constructing an object from scratch is expensive and you need many similar copies"
+      },
+      {
+        "id": "b",
+        "text": "When you must forbid copying entirely"
+      },
+      {
+        "id": "c",
+        "text": "When an object should have exactly one instance"
+      },
+      {
+        "id": "d",
+        "text": "When two incompatible interfaces must work together"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q13",
+    "topic": "creational-objects",
+    "lesson": "singleton-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Singleton pattern?",
+    "explanation": "Singleton restricts a class to one instance with global access. Cloning = Prototype; step-by-step = Builder; families = Abstract Factory.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ensure a class has only one instance and provide a global point of access to it"
+      },
+      {
+        "id": "b",
+        "text": "Create objects by cloning a prototype"
+      },
+      {
+        "id": "c",
+        "text": "Build a complex object step by step"
+      },
+      {
+        "id": "d",
+        "text": "Create families of related products"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q14",
+    "topic": "creational-objects",
+    "lesson": "singleton-drawbacks-and-antipattern",
+    "type": "multiple-choice",
+    "prompt": "Which are common, valid criticisms of Singleton? Select all that apply.",
+    "explanation": "Singleton's downsides are global state, hidden dependencies, and testing pain. It has nothing to do with speed.",
+    "options": [
+      {
+        "id": "a",
+        "text": "It introduces global mutable state"
+      },
+      {
+        "id": "b",
+        "text": "It hides a class's real dependencies"
+      },
+      {
+        "id": "c",
+        "text": "It makes unit testing harder because state leaks between tests"
+      },
+      {
+        "id": "d",
+        "text": "It always makes programs run faster"
+      }
+    ],
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  {
+    "id": "creational-objects-q15",
+    "topic": "creational-objects",
+    "lesson": "singleton-implementation-ts",
+    "type": "multiple-choice",
+    "prompt": "Which two things make a class a Singleton? Select all that apply.",
+    "explanation": "A private constructor blocks outside instantiation; a static accessor lazily creates and returns the one instance.",
+    "options": [
+      {
+        "id": "a",
+        "text": "A private constructor"
+      },
+      {
+        "id": "b",
+        "text": "A static accessor that returns the single instance"
+      },
+      {
+        "id": "c",
+        "text": "A clone() method"
+      },
+      {
+        "id": "d",
+        "text": "A fluent build() method"
+      }
+    ],
+    "answer": [
+      "a",
+      "b"
+    ]
+  },
+  {
+    "id": "creational-objects-q16",
+    "topic": "creational-objects",
+    "lesson": "singleton-alternatives-modules-di",
+    "type": "single-choice",
+    "prompt": "Why is a Singleton class often unnecessary in TypeScript?",
+    "explanation": "Modules run once and their exports are shared across imports, giving a single instance without the Singleton ceremony.",
+    "options": [
+      {
+        "id": "a",
+        "text": "An ES module is evaluated once, so a module-level export is already a single shared instance"
+      },
+      {
+        "id": "b",
+        "text": "TypeScript forbids the `new` keyword"
+      },
+      {
+        "id": "c",
+        "text": "TypeScript objects are automatically global"
+      },
+      {
+        "id": "d",
+        "text": "Classes cannot have static members in TypeScript"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q17",
+    "topic": "creational-objects",
+    "lesson": "singleton-implementation-ts",
+    "type": "single-choice",
+    "prompt": "Is the classic 'two threads create two instances' thread-safety concern relevant in JavaScript?",
+    "explanation": "Single-threaded JS avoids that race; the synchronization concern applies to languages like Java, C#, and C++.",
+    "options": [
+      {
+        "id": "a",
+        "text": "No — JavaScript is single-threaded, so that race doesn't occur (it matters in multi-threaded languages)"
+      },
+      {
+        "id": "b",
+        "text": "Yes — JavaScript runs every function on its own thread"
+      },
+      {
+        "id": "c",
+        "text": "Yes — and it can only be fixed with locks in JavaScript"
+      },
+      {
+        "id": "d",
+        "text": "It is impossible to create a Singleton in JavaScript"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "creational-objects-q18",
+    "topic": "creational-objects",
+    "lesson": "singleton-alternatives-modules-di",
+    "type": "single-choice",
+    "prompt": "For most application code, what is usually a better alternative to fetching a Singleton?",
+    "explanation": "Injecting a single instance keeps dependencies visible and lets tests substitute a fake — avoiding Singleton's worst problems.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Dependency Injection — create one instance and pass it in, keeping dependencies explicit"
+      },
+      {
+        "id": "b",
+        "text": "Copying the object with a shallow clone everywhere"
+      },
+      {
+        "id": "c",
+        "text": "Making every field public and global"
+      },
+      {
+        "id": "d",
+        "text": "Adding more static methods"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-adapters-q01",
+    "topic": "structural-adapters",
+    "lesson": "adapter-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Adapter pattern?",
+    "explanation": "Adapter changes one interface into a different expected one. Adding behavior = Decorator; simplifying a subsystem = Facade; controlling access = Proxy.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Convert the interface of a class into another interface clients expect"
+      },
+      {
+        "id": "b",
+        "text": "Add new behavior to an object while keeping its interface"
+      },
+      {
+        "id": "c",
+        "text": "Provide a simplified interface to a complex subsystem"
+      },
+      {
+        "id": "d",
+        "text": "Control access to another object"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-adapters-q02",
+    "topic": "structural-adapters",
+    "lesson": "object-adapter-vs-class-adapter",
+    "type": "match-pair",
+    "prompt": "Match each Adapter participant to its role.",
+    "explanation": "The adapter implements the Target and forwards calls to the Adaptee, so the Client only sees the Target.",
+    "pairs": [
+      {
+        "left": "Target",
+        "right": "The interface the client wants to use"
+      },
+      {
+        "left": "Adaptee",
+        "right": "The existing class with an incompatible interface"
+      },
+      {
+        "left": "Adapter",
+        "right": "Implements the target and delegates to the adaptee"
+      }
+    ]
+  },
+  {
+    "id": "structural-adapters-q03",
+    "topic": "structural-adapters",
+    "lesson": "object-adapter-vs-class-adapter",
+    "type": "single-choice",
+    "prompt": "Why do TypeScript adapters typically use composition (an 'object adapter')?",
+    "explanation": "Class adapters need multiple inheritance; TypeScript classes have single inheritance, so the adapter composes (holds) the adaptee.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The adapter holds the adaptee, which suits TypeScript's single-inheritance classes"
+      },
+      {
+        "id": "b",
+        "text": "TypeScript forbids interfaces"
+      },
+      {
+        "id": "c",
+        "text": "Because composition is always slower"
+      },
+      {
+        "id": "d",
+        "text": "Because TypeScript supports multiple inheritance of classes"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-adapters-q04",
+    "topic": "structural-adapters",
+    "lesson": "adapter-in-practice",
+    "type": "fill-blank",
+    "prompt": "Adapter is most useful at integration ____ — third-party libraries or legacy modules whose interface you can't change.",
+    "explanation": "Adapters belong at boundaries you don't own or shouldn't modify, centralizing the translation there.",
+    "answer": [
+      "boundaries",
+      "boundary",
+      "Boundaries"
+    ]
+  },
+  {
+    "id": "structural-adapters-q05",
+    "topic": "structural-adapters",
+    "lesson": "adapter-intent",
+    "type": "single-choice",
+    "prompt": "How does Adapter differ from Facade?",
+    "explanation": "Adapter is about interface conversion; Facade is about presenting a simpler front to many classes.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Adapter makes one interface look like a different expected interface; Facade simplifies a complex subsystem"
+      },
+      {
+        "id": "b",
+        "text": "They are the same pattern"
+      },
+      {
+        "id": "c",
+        "text": "Adapter adds behavior; Facade removes behavior"
+      },
+      {
+        "id": "d",
+        "text": "Adapter controls access; Facade clones objects"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-adapters-q06",
+    "topic": "structural-adapters",
+    "lesson": "adapter-tradeoffs",
+    "type": "single-choice",
+    "prompt": "Which is a sign you might be MISUSING Adapter?",
+    "explanation": "Adapters are for boundaries you can't change; adapting code you own can just paper over an inconsistent design you should fix.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Using it to hide a mismatch between two interfaces you own and could align directly"
+      },
+      {
+        "id": "b",
+        "text": "Using it to wrap a third-party library you can't modify"
+      },
+      {
+        "id": "c",
+        "text": "Keeping the adapter thin and free of business logic"
+      },
+      {
+        "id": "d",
+        "text": "Letting the client depend only on the Target interface"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-adapters-q07",
+    "topic": "structural-adapters",
+    "lesson": "bridge-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Bridge pattern?",
+    "explanation": "Bridge separates two dimensions so each can change independently. Converting interfaces = Adapter; trees = Composite; one instance = Singleton.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Decouple an abstraction from its implementation so the two can vary independently"
+      },
+      {
+        "id": "b",
+        "text": "Convert one interface into another"
+      },
+      {
+        "id": "c",
+        "text": "Compose objects into tree structures"
+      },
+      {
+        "id": "d",
+        "text": "Ensure a class has one instance"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-adapters-q08",
+    "topic": "structural-adapters",
+    "lesson": "separating-abstraction-implementation",
+    "type": "single-choice",
+    "prompt": "What problem does Bridge primarily prevent?",
+    "explanation": "Combining N shapes with M renderers via inheritance needs N×M subclasses; Bridge makes it N+M across two hierarchies.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The combinatorial explosion of subclasses from combining two dimensions via inheritance"
+      },
+      {
+        "id": "b",
+        "text": "Two threads creating two instances"
+      },
+      {
+        "id": "c",
+        "text": "Shallow copies sharing state"
+      },
+      {
+        "id": "d",
+        "text": "Fat interfaces forcing unused methods"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-adapters-q09",
+    "topic": "structural-adapters",
+    "lesson": "bridge-in-cross-platform-code",
+    "type": "single-choice",
+    "prompt": "What is the 'bridge' between the two hierarchies?",
+    "explanation": "The abstraction composes an implementor interface and delegates low-level work to it — that link is the bridge.",
+    "options": [
+      {
+        "id": "a",
+        "text": "A composition link: the abstraction holds and delegates to an implementation interface"
+      },
+      {
+        "id": "b",
+        "text": "A shared base class both inherit from"
+      },
+      {
+        "id": "c",
+        "text": "A global singleton registry"
+      },
+      {
+        "id": "d",
+        "text": "A clone() method"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-adapters-q10",
+    "topic": "structural-adapters",
+    "lesson": "bridge-vs-adapter",
+    "type": "single-choice",
+    "prompt": "How does Bridge differ from Adapter?",
+    "explanation": "Bridge is a planned separation; Adapter is a reactive fix for a mismatch you didn't plan for.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Bridge is designed up front to keep two dimensions independent; Adapter reconciles two existing incompatible interfaces after the fact"
+      },
+      {
+        "id": "b",
+        "text": "They are identical"
+      },
+      {
+        "id": "c",
+        "text": "Bridge only works with third-party code"
+      },
+      {
+        "id": "d",
+        "text": "Adapter always creates families of objects"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-adapters-q11",
+    "topic": "structural-adapters",
+    "lesson": "bridge-vs-adapter",
+    "type": "single-choice",
+    "prompt": "When is Bridge overkill?",
+    "explanation": "With only one implementation there's no second axis to decouple, so the extra interface and delegation add no value.",
+    "options": [
+      {
+        "id": "a",
+        "text": "When there is really only one dimension of change (e.g. a single implementation)"
+      },
+      {
+        "id": "b",
+        "text": "When both the abstraction and implementation grow over time"
+      },
+      {
+        "id": "c",
+        "text": "When you want to swap implementations at runtime"
+      },
+      {
+        "id": "d",
+        "text": "When you have many shapes and many renderers"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-adapters-q12",
+    "topic": "structural-adapters",
+    "lesson": "separating-abstraction-implementation",
+    "type": "multiple-choice",
+    "prompt": "Which are genuine benefits of Bridge? Select all that apply.",
+    "explanation": "Bridge gives independent evolution, runtime switching, and linear (not multiplicative) growth. Single-instance guarantees are Singleton's job.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Abstraction and implementation can evolve independently"
+      },
+      {
+        "id": "b",
+        "text": "You can switch the implementation at runtime"
+      },
+      {
+        "id": "c",
+        "text": "It guarantees a single global instance"
+      },
+      {
+        "id": "d",
+        "text": "New variants on either side are added without multiplying subclasses"
+      }
+    ],
+    "answer": [
+      "a",
+      "b",
+      "d"
+    ]
+  },
+  {
+    "id": "structural-composition-q01",
+    "topic": "structural-composition",
+    "lesson": "composite-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Composite pattern?",
+    "explanation": "Composite is about part-whole trees with uniform treatment. Decoupling two dimensions = Bridge; adding responsibilities = Decorator; one instance = Singleton.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Compose objects into tree structures and let clients treat individual objects and compositions uniformly"
+      },
+      {
+        "id": "b",
+        "text": "Decouple an abstraction from its implementation"
+      },
+      {
+        "id": "c",
+        "text": "Attach responsibilities to an object dynamically"
+      },
+      {
+        "id": "d",
+        "text": "Ensure a single instance"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-composition-q02",
+    "topic": "structural-composition",
+    "lesson": "uniform-tree-hierarchy",
+    "type": "match-pair",
+    "prompt": "Match each Composite role to its description.",
+    "explanation": "Leaves and composites share the Component interface; composites implement operations by delegating to their children.",
+    "pairs": [
+      {
+        "left": "Component",
+        "right": "The shared interface for all nodes"
+      },
+      {
+        "left": "Leaf",
+        "right": "A node with no children"
+      },
+      {
+        "left": "Composite",
+        "right": "A node that holds children and delegates to them"
+      }
+    ]
+  },
+  {
+    "id": "structural-composition-q03",
+    "topic": "structural-composition",
+    "lesson": "composite-recursive-operations",
+    "type": "single-choice",
+    "prompt": "How does a composite typically implement an operation such as size()?",
+    "explanation": "A folder's size() sums the sizes of its children, each of which may itself be a folder — recursion through the tree.",
+    "options": [
+      {
+        "id": "a",
+        "text": "By recursing — delegating to each child and combining the results"
+      },
+      {
+        "id": "b",
+        "text": "By cloning itself"
+      },
+      {
+        "id": "c",
+        "text": "By converting its interface to another"
+      },
+      {
+        "id": "d",
+        "text": "By storing a single global value"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-composition-q04",
+    "topic": "structural-composition",
+    "lesson": "composite-intent",
+    "type": "fill-blank",
+    "prompt": "Composite represents ____-whole hierarchies, where wholes are made of parts that may themselves be wholes.",
+    "explanation": "The pattern models part-whole hierarchies such as files within folders within folders.",
+    "answer": [
+      "part",
+      "Part"
+    ]
+  },
+  {
+    "id": "structural-composition-q05",
+    "topic": "structural-composition",
+    "lesson": "composite-tradeoffs",
+    "type": "single-choice",
+    "prompt": "What is the well-known design tension in Composite?",
+    "explanation": "Putting child-management on the Component forces leaves to implement methods that don't apply, often by throwing — a Liskov trade-off.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Whether add/remove belong on the shared Component (forcing leaves to implement them) or only on the Composite"
+      },
+      {
+        "id": "b",
+        "text": "Whether to use a private constructor"
+      },
+      {
+        "id": "c",
+        "text": "Whether to deep-copy or shallow-copy"
+      },
+      {
+        "id": "d",
+        "text": "Whether to inject dependencies"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-composition-q06",
+    "topic": "structural-composition",
+    "lesson": "composite-recursive-operations",
+    "type": "single-choice",
+    "prompt": "When is Composite the WRONG choice?",
+    "explanation": "Composite earns its keep only with real nesting; a flat list gains nothing from it.",
+    "options": [
+      {
+        "id": "a",
+        "text": "When the data is a flat collection, not a genuine tree"
+      },
+      {
+        "id": "b",
+        "text": "When you have folders nested inside folders"
+      },
+      {
+        "id": "c",
+        "text": "When you want to treat leaves and groups uniformly"
+      },
+      {
+        "id": "d",
+        "text": "When a UI panel contains other panels"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-composition-q07",
+    "topic": "structural-composition",
+    "lesson": "decorator-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Decorator pattern?",
+    "explanation": "Decorator adds behavior dynamically while keeping the same interface. Converting interfaces = Adapter; trees = Composite; simplifying = Facade.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Attach additional responsibilities to an object dynamically, as a flexible alternative to subclassing"
+      },
+      {
+        "id": "b",
+        "text": "Convert one interface into another"
+      },
+      {
+        "id": "c",
+        "text": "Compose objects into tree structures"
+      },
+      {
+        "id": "d",
+        "text": "Provide a simplified interface to a subsystem"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-composition-q08",
+    "topic": "structural-composition",
+    "lesson": "wrapping-behavior-dynamically",
+    "type": "single-choice",
+    "prompt": "What does a decorator keep the same as the object it wraps?",
+    "explanation": "A decorator implements the same Component interface, so it's transparent to callers and can be stacked.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Its interface, so clients can't tell it's wrapped"
+      },
+      {
+        "id": "b",
+        "text": "Its exact memory address"
+      },
+      {
+        "id": "c",
+        "text": "Nothing — it changes the interface"
+      },
+      {
+        "id": "d",
+        "text": "Its private constructor"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-composition-q09",
+    "topic": "structural-composition",
+    "lesson": "stacking-multiple-decorators",
+    "type": "single-choice",
+    "prompt": "How does Decorator differ from Proxy?",
+    "explanation": "Decorator and Proxy both wrap with the same interface; the difference is intent — adding responsibilities vs controlling access.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Both keep the same interface, but Decorator adds behavior while Proxy controls access"
+      },
+      {
+        "id": "b",
+        "text": "Decorator changes the interface; Proxy keeps it"
+      },
+      {
+        "id": "c",
+        "text": "They are the same pattern"
+      },
+      {
+        "id": "d",
+        "text": "Proxy adds behavior; Decorator clones the object"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-composition-q10",
+    "topic": "structural-composition",
+    "lesson": "decorator-vs-inheritance",
+    "type": "single-choice",
+    "prompt": "What common bug breaks a decorator chain?",
+    "explanation": "Decorators must delegate calls they don't specifically change; forgetting to forward makes the wrapped behavior vanish.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Overriding a method but forgetting to forward the call to the wrapped object"
+      },
+      {
+        "id": "b",
+        "text": "Using an interface"
+      },
+      {
+        "id": "c",
+        "text": "Making the base component immutable"
+      },
+      {
+        "id": "d",
+        "text": "Injecting the component"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-composition-q11",
+    "topic": "structural-composition",
+    "lesson": "wrapping-behavior-dynamically",
+    "type": "single-choice",
+    "prompt": "How is the GoF Decorator pattern different from TypeScript's @decorator language feature?",
+    "explanation": "Same name, different mechanism: one is a runtime object-wrapping pattern, the other is annotation syntax.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The GoF Decorator is a wrapping design pattern; @decorator is a language feature for annotating classes/members"
+      },
+      {
+        "id": "b",
+        "text": "They are identical"
+      },
+      {
+        "id": "c",
+        "text": "The GoF Decorator only works with the @ syntax"
+      },
+      {
+        "id": "d",
+        "text": "@decorator can only create singletons"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-composition-q12",
+    "topic": "structural-composition",
+    "lesson": "decorator-vs-inheritance",
+    "type": "multiple-choice",
+    "prompt": "Which are advantages of Decorator over subclassing every combination? Select all that apply.",
+    "explanation": "Decorator gives runtime combination, avoids the combinatorial subclass explosion, and keeps each wrapper focused. Single-instance is Singleton.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Behaviors can be combined at runtime in any order"
+      },
+      {
+        "id": "b",
+        "text": "It avoids a class explosion of feature combinations"
+      },
+      {
+        "id": "c",
+        "text": "Each decorator can stay small and single-purpose"
+      },
+      {
+        "id": "d",
+        "text": "It guarantees only one instance of the object"
+      }
+    ],
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  {
+    "id": "structural-proxies-q01",
+    "topic": "structural-proxies",
+    "lesson": "facade-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Facade pattern?",
+    "explanation": "Facade simplifies a subsystem behind one interface. Converting an interface = Adapter; adding responsibilities = Decorator; cloning = Prototype.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Provide a unified, higher-level interface that makes a complex subsystem easier to use"
+      },
+      {
+        "id": "b",
+        "text": "Convert one class's interface into another"
+      },
+      {
+        "id": "c",
+        "text": "Add responsibilities to an object dynamically"
+      },
+      {
+        "id": "d",
+        "text": "Clone objects from a prototype"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-proxies-q02",
+    "topic": "structural-proxies",
+    "lesson": "subsystem-simplification",
+    "type": "single-choice",
+    "prompt": "Does a Facade prevent callers from using the subsystem directly?",
+    "explanation": "A facade simplifies the common case without hiding or forbidding direct subsystem access for edge cases.",
+    "options": [
+      {
+        "id": "a",
+        "text": "No — it offers an easy path but leaves the subsystem reachable for advanced needs"
+      },
+      {
+        "id": "b",
+        "text": "Yes — the subsystem becomes completely inaccessible"
+      },
+      {
+        "id": "c",
+        "text": "Yes — it deletes the subsystem classes"
+      },
+      {
+        "id": "d",
+        "text": "Only if the subsystem is a singleton"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-proxies-q03",
+    "topic": "structural-proxies",
+    "lesson": "facade-vs-adapter-vs-mediator",
+    "type": "single-choice",
+    "prompt": "How does Facade differ from Adapter?",
+    "explanation": "Facade = simplify many; Adapter = convert one interface into a specific expected interface.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Facade wraps many classes behind a new simpler interface; Adapter converts one object's interface to a specific expected one"
+      },
+      {
+        "id": "b",
+        "text": "They are identical"
+      },
+      {
+        "id": "c",
+        "text": "Facade changes an interface; Adapter simplifies a subsystem"
+      },
+      {
+        "id": "d",
+        "text": "Facade controls access; Adapter adds behavior"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-proxies-q04",
+    "topic": "structural-proxies",
+    "lesson": "facade-intent",
+    "type": "single-choice",
+    "prompt": "What is the main risk of a Facade over time?",
+    "explanation": "If every feature is bolted on, the facade relocates the complexity it was meant to hide — the god-object anti-pattern.",
+    "options": [
+      {
+        "id": "a",
+        "text": "It can swell into a god object that accumulates too many responsibilities"
+      },
+      {
+        "id": "b",
+        "text": "It forces two threads to collide"
+      },
+      {
+        "id": "c",
+        "text": "It always makes the subsystem slower"
+      },
+      {
+        "id": "d",
+        "text": "It prevents dependency injection"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-proxies-q05",
+    "topic": "structural-proxies",
+    "lesson": "subsystem-simplification",
+    "type": "fill-blank",
+    "prompt": "A key benefit of Facade is that it reduces ____ between client code and a complex subsystem.",
+    "explanation": "Clients depend on the single facade instead of many subsystem internals, lowering coupling.",
+    "answer": [
+      "coupling",
+      "Coupling"
+    ]
+  },
+  {
+    "id": "structural-proxies-q06",
+    "topic": "structural-proxies",
+    "lesson": "facade-vs-adapter-vs-mediator",
+    "type": "single-choice",
+    "prompt": "In the order example, what does placeOrder() encode so clients don't have to?",
+    "explanation": "The facade captures the workflow and ordering across subsystems so each caller doesn't repeat it.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The correct sequence: reserve inventory, then charge payment, then schedule shipping"
+      },
+      {
+        "id": "b",
+        "text": "The single global instance of the order"
+      },
+      {
+        "id": "c",
+        "text": "How to deep-copy the order"
+      },
+      {
+        "id": "d",
+        "text": "How to convert the order to another interface"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-proxies-q07",
+    "topic": "structural-proxies",
+    "lesson": "flyweight-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Flyweight pattern?",
+    "explanation": "Flyweight shares common state to save memory across many objects. Simplifying = Facade; one instance = Singleton; converting = Adapter.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use sharing to support large numbers of fine-grained objects efficiently"
+      },
+      {
+        "id": "b",
+        "text": "Provide a simplified interface to a subsystem"
+      },
+      {
+        "id": "c",
+        "text": "Ensure a class has one instance"
+      },
+      {
+        "id": "d",
+        "text": "Convert one interface into another"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-proxies-q08",
+    "topic": "structural-proxies",
+    "lesson": "intrinsic-vs-extrinsic-state",
+    "type": "match-pair",
+    "prompt": "Match each kind of state to its description.",
+    "explanation": "Intrinsic state is shared and immutable; extrinsic state (like coordinates) is unique per object and supplied from outside.",
+    "pairs": [
+      {
+        "left": "Intrinsic state",
+        "right": "Shared, context-independent, stored in the flyweight"
+      },
+      {
+        "left": "Extrinsic state",
+        "right": "Unique per use, kept outside and passed in"
+      }
+    ]
+  },
+  {
+    "id": "structural-proxies-q09",
+    "topic": "structural-proxies",
+    "lesson": "intrinsic-vs-extrinsic-state",
+    "type": "single-choice",
+    "prompt": "Why must a flyweight's intrinsic state be immutable?",
+    "explanation": "Shared state that could change would affect every object referencing the flyweight, so it must be immutable.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Because it is shared across many objects, so a change would corrupt all of them"
+      },
+      {
+        "id": "b",
+        "text": "Because TypeScript forbids mutation"
+      },
+      {
+        "id": "c",
+        "text": "Because it makes the objects singletons"
+      },
+      {
+        "id": "d",
+        "text": "Because extrinsic state can't exist otherwise"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-proxies-q10",
+    "topic": "structural-proxies",
+    "lesson": "flyweight-factory-and-cache",
+    "type": "single-choice",
+    "prompt": "What does the flyweight factory guarantee?",
+    "explanation": "The factory caches and returns shared instances, creating one only when a genuinely new intrinsic combination appears.",
+    "options": [
+      {
+        "id": "a",
+        "text": "That flyweights are reused — a new one is created only for a new combination of intrinsic state"
+      },
+      {
+        "id": "b",
+        "text": "That every request returns a brand-new object"
+      },
+      {
+        "id": "c",
+        "text": "That objects are deep-copied"
+      },
+      {
+        "id": "d",
+        "text": "That the subsystem is hidden"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-proxies-q11",
+    "topic": "structural-proxies",
+    "lesson": "flyweight-tradeoffs-memory",
+    "type": "fill-blank",
+    "prompt": "Flyweight's explicit goal is to save ____ when there are very many similar objects.",
+    "explanation": "It is the one GoF pattern whose stated purpose is efficient memory use across large numbers of objects.",
+    "answer": [
+      "memory",
+      "Memory",
+      "RAM"
+    ]
+  },
+  {
+    "id": "structural-proxies-q12",
+    "topic": "structural-proxies",
+    "lesson": "flyweight-tradeoffs-memory",
+    "type": "single-choice",
+    "prompt": "When is Flyweight the WRONG choice?",
+    "explanation": "Flyweight only pays off at large scale with shared data; with few objects or all-unique state it just adds complexity.",
+    "options": [
+      {
+        "id": "a",
+        "text": "When you have only a modest number of objects, or each object's data is unique"
+      },
+      {
+        "id": "b",
+        "text": "When you have millions of objects sharing common data"
+      },
+      {
+        "id": "c",
+        "text": "When memory is the bottleneck"
+      },
+      {
+        "id": "d",
+        "text": "When many objects share the same texture"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-proxies-q13",
+    "topic": "structural-proxies",
+    "lesson": "proxy-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Proxy pattern?",
+    "explanation": "Proxy controls access via a same-interface stand-in. Adding responsibilities = Decorator; converting = Adapter; sharing state = Flyweight.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Provide a surrogate with the same interface that controls access to another object"
+      },
+      {
+        "id": "b",
+        "text": "Add responsibilities to an object dynamically"
+      },
+      {
+        "id": "c",
+        "text": "Convert one interface into another"
+      },
+      {
+        "id": "d",
+        "text": "Share intrinsic state across many objects"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-proxies-q14",
+    "topic": "structural-proxies",
+    "lesson": "virtual-proxy-lazy-loading",
+    "type": "match-pair",
+    "prompt": "Match each proxy variety to what it does.",
+    "explanation": "Proxies are categorized by purpose: lazy loading, access control, remoting, and caching.",
+    "pairs": [
+      {
+        "left": "Virtual proxy",
+        "right": "Defers creating an expensive object until needed"
+      },
+      {
+        "left": "Protection proxy",
+        "right": "Checks permissions before forwarding"
+      },
+      {
+        "left": "Remote proxy",
+        "right": "Represents an object in another process/machine"
+      },
+      {
+        "left": "Caching proxy",
+        "right": "Stores results to avoid repeat work"
+      }
+    ]
+  },
+  {
+    "id": "structural-proxies-q15",
+    "topic": "structural-proxies",
+    "lesson": "protection-and-caching-proxies",
+    "type": "single-choice",
+    "prompt": "Both Proxy and Decorator keep the same interface as the wrapped object. What distinguishes them?",
+    "explanation": "The tell is intent: Decorator enriches behavior, Proxy gatekeeps access (lazy, secure, cached, remote).",
+    "options": [
+      {
+        "id": "a",
+        "text": "Decorator adds responsibilities; Proxy controls access"
+      },
+      {
+        "id": "b",
+        "text": "Decorator changes the interface; Proxy does not"
+      },
+      {
+        "id": "c",
+        "text": "Proxy adds responsibilities; Decorator controls access"
+      },
+      {
+        "id": "d",
+        "text": "They are the same pattern"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-proxies-q16",
+    "topic": "structural-proxies",
+    "lesson": "proxy-vs-decorator-vs-adapter",
+    "type": "match-pair",
+    "prompt": "Match each wrapper pattern to how its interface relates to the wrapped object.",
+    "explanation": "Adapter converts, Facade simplifies many, Decorator adds behavior (same interface), Proxy controls access (same interface).",
+    "pairs": [
+      {
+        "left": "Adapter",
+        "right": "A different (converted) interface"
+      },
+      {
+        "left": "Facade",
+        "right": "A new, simpler interface over many classes"
+      },
+      {
+        "left": "Decorator",
+        "right": "The same interface, with added behavior"
+      },
+      {
+        "left": "Proxy",
+        "right": "The same interface, controlling access"
+      }
+    ]
+  },
+  {
+    "id": "structural-proxies-q17",
+    "topic": "structural-proxies",
+    "lesson": "virtual-proxy-lazy-loading",
+    "type": "single-choice",
+    "prompt": "What does a virtual proxy do?",
+    "explanation": "A virtual proxy provides lazy loading — the costly object is built on first use, or never if unused.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Defers creating an expensive real object until it is actually needed"
+      },
+      {
+        "id": "b",
+        "text": "Encrypts all method names"
+      },
+      {
+        "id": "c",
+        "text": "Merges two subsystems"
+      },
+      {
+        "id": "d",
+        "text": "Clones the real object on every call"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "structural-proxies-q18",
+    "topic": "structural-proxies",
+    "lesson": "proxy-vs-decorator-vs-adapter",
+    "type": "single-choice",
+    "prompt": "What is JavaScript's built-in Proxy object?",
+    "explanation": "The built-in Proxy intercepts fundamental operations on a target object — one way to implement proxy-like access control.",
+    "options": [
+      {
+        "id": "a",
+        "text": "A language feature that wraps a target and traps operations like get/set/has"
+      },
+      {
+        "id": "b",
+        "text": "A way to guarantee a single instance"
+      },
+      {
+        "id": "c",
+        "text": "A tool that deep-copies objects"
+      },
+      {
+        "id": "d",
+        "text": "A replacement for interfaces"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-requests-q01",
+    "topic": "behavioral-requests",
+    "lesson": "chain-of-responsibility-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Chain of Responsibility pattern?",
+    "explanation": "CoR chains handlers and forwards the request. Encapsulating a request as an object = Command; one instance = Singleton; sharing state = Flyweight.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Pass a request along a chain of handlers until one handles it, decoupling sender from receiver"
+      },
+      {
+        "id": "b",
+        "text": "Encapsulate a request as an object"
+      },
+      {
+        "id": "c",
+        "text": "Ensure a class has a single instance"
+      },
+      {
+        "id": "d",
+        "text": "Share intrinsic state across many objects"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-requests-q02",
+    "topic": "behavioral-requests",
+    "lesson": "handler-chain-linking",
+    "type": "single-choice",
+    "prompt": "When a handler receives a request, what are its two options?",
+    "explanation": "Each handler either processes the request or passes it along the chain.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Handle it, or forward it to the next handler"
+      },
+      {
+        "id": "b",
+        "text": "Clone it, or delete it"
+      },
+      {
+        "id": "c",
+        "text": "Encrypt it, or cache it"
+      },
+      {
+        "id": "d",
+        "text": "Convert it, or simplify it"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-requests-q03",
+    "topic": "behavioral-requests",
+    "lesson": "chain-of-responsibility-tradeoffs",
+    "type": "single-choice",
+    "prompt": "Why might a request go unhandled in this pattern?",
+    "explanation": "The pattern doesn't guarantee handling; you must add a default/terminal handler if handling is required.",
+    "options": [
+      {
+        "id": "a",
+        "text": "No handler is guaranteed to act, so a request can reach the end of the chain without being processed"
+      },
+      {
+        "id": "b",
+        "text": "Requests are always handled by the first handler"
+      },
+      {
+        "id": "c",
+        "text": "The chain deep-copies every request"
+      },
+      {
+        "id": "d",
+        "text": "Handlers can only run once per program"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-requests-q04",
+    "topic": "behavioral-requests",
+    "lesson": "handler-chain-linking",
+    "type": "single-choice",
+    "prompt": "Why does the order of handlers matter?",
+    "explanation": "Because handlers see the request in order, putting auth before or after validation produces different behavior.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The request travels through handlers in sequence, so reordering changes the outcome"
+      },
+      {
+        "id": "b",
+        "text": "Order never matters in this pattern"
+      },
+      {
+        "id": "c",
+        "text": "Only the last handler ever runs"
+      },
+      {
+        "id": "d",
+        "text": "Handlers run in random order"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-requests-q05",
+    "topic": "behavioral-requests",
+    "lesson": "middleware-pipelines",
+    "type": "single-choice",
+    "prompt": "Which everyday web construct is an example of Chain of Responsibility?",
+    "explanation": "Middleware chains handlers that each inspect the request and either handle it or forward it.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Middleware, where each layer either responds or calls next()"
+      },
+      {
+        "id": "b",
+        "text": "A database index"
+      },
+      {
+        "id": "c",
+        "text": "A CSS stylesheet"
+      },
+      {
+        "id": "d",
+        "text": "A DNS record"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-requests-q06",
+    "topic": "behavioral-requests",
+    "lesson": "chain-of-responsibility-tradeoffs",
+    "type": "multiple-choice",
+    "prompt": "Which are genuine benefits of Chain of Responsibility? Select all that apply.",
+    "explanation": "CoR decouples sender and receiver, supports flexible chains, and keeps handlers focused. It does NOT guarantee a request is handled.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The sender is decoupled from whichever receiver acts"
+      },
+      {
+        "id": "b",
+        "text": "Handlers can be added, removed, or reordered"
+      },
+      {
+        "id": "c",
+        "text": "Every request is guaranteed to be handled"
+      },
+      {
+        "id": "d",
+        "text": "Each handler can stay small and single-purpose"
+      }
+    ],
+    "answer": [
+      "a",
+      "b",
+      "d"
+    ]
+  },
+  {
+    "id": "behavioral-requests-q07",
+    "topic": "behavioral-requests",
+    "lesson": "command-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Command pattern?",
+    "explanation": "Command turns a request into an object. Passing along a chain = Chain of Responsibility; simplifying = Facade; families = Abstract Factory.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Encapsulate a request as an object so it can be parameterized, queued, logged, and undone"
+      },
+      {
+        "id": "b",
+        "text": "Pass a request along a chain of handlers"
+      },
+      {
+        "id": "c",
+        "text": "Provide a simplified interface to a subsystem"
+      },
+      {
+        "id": "d",
+        "text": "Create families of related objects"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-requests-q08",
+    "topic": "behavioral-requests",
+    "lesson": "command-pattern-implementation",
+    "type": "match-pair",
+    "prompt": "Match each Command role to its responsibility.",
+    "explanation": "The invoker calls execute(); the concrete command tells the receiver what to do; the client wires them together.",
+    "pairs": [
+      {
+        "left": "Command",
+        "right": "Represents the action, usually with execute()/undo()"
+      },
+      {
+        "left": "Receiver",
+        "right": "Performs the real work"
+      },
+      {
+        "left": "Invoker",
+        "right": "Triggers the command without knowing its details"
+      }
+    ]
+  },
+  {
+    "id": "behavioral-requests-q09",
+    "topic": "behavioral-requests",
+    "lesson": "undo-redo-with-commands",
+    "type": "multiple-choice",
+    "prompt": "Which capabilities does turning an action into a Command object unlock? Select all that apply.",
+    "explanation": "Command enables undo/redo, queuing, and logging/replay. Single-instance guarantees are Singleton's job.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Undo/redo"
+      },
+      {
+        "id": "b",
+        "text": "Queuing or scheduling actions"
+      },
+      {
+        "id": "c",
+        "text": "Logging and replay"
+      },
+      {
+        "id": "d",
+        "text": "Guaranteeing a single global instance"
+      }
+    ],
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  {
+    "id": "behavioral-requests-q10",
+    "topic": "behavioral-requests",
+    "lesson": "undo-redo-with-commands",
+    "type": "single-choice",
+    "prompt": "Which method typically accompanies execute() to support undo?",
+    "explanation": "A symmetric undo() reverses execute(); a history of commands enables undo/redo.",
+    "options": [
+      {
+        "id": "a",
+        "text": "undo(), which reverses the effect of execute()"
+      },
+      {
+        "id": "b",
+        "text": "clone(), which copies the command"
+      },
+      {
+        "id": "c",
+        "text": "render(), which draws the command"
+      },
+      {
+        "id": "d",
+        "text": "getInstance(), which returns the command"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-requests-q11",
+    "topic": "behavioral-requests",
+    "lesson": "command-pattern-implementation",
+    "type": "single-choice",
+    "prompt": "In TypeScript, when is a plain function enough instead of a full Command object?",
+    "explanation": "First-class functions cover simple actions; the object form pays off when you need Command's extra powers.",
+    "options": [
+      {
+        "id": "a",
+        "text": "For fire-and-forget actions that don't need undo, queuing, logging, or serialization"
+      },
+      {
+        "id": "b",
+        "text": "Never — Command always requires a class"
+      },
+      {
+        "id": "c",
+        "text": "Only when there is exactly one receiver"
+      },
+      {
+        "id": "d",
+        "text": "Only inside a Singleton"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-requests-q12",
+    "topic": "behavioral-requests",
+    "lesson": "command-queuing-and-logging",
+    "type": "single-choice",
+    "prompt": "Which pattern is often paired with Command to implement undo?",
+    "explanation": "Memento snapshots state so a command's undo can roll back to the earlier state.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Memento — it captures and restores an object's prior state"
+      },
+      {
+        "id": "b",
+        "text": "Flyweight"
+      },
+      {
+        "id": "c",
+        "text": "Abstract Factory"
+      },
+      {
+        "id": "d",
+        "text": "Facade"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-traversal-q01",
+    "topic": "behavioral-traversal",
+    "lesson": "iterator-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Iterator pattern?",
+    "explanation": "Iterator gives uniform sequential access while hiding structure. Request-as-object = Command; object interaction = Mediator; one instance = Singleton.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Access the elements of a collection sequentially without exposing its underlying representation"
+      },
+      {
+        "id": "b",
+        "text": "Encapsulate a request as an object"
+      },
+      {
+        "id": "c",
+        "text": "Define how a set of objects interact"
+      },
+      {
+        "id": "d",
+        "text": "Ensure a class has one instance"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-traversal-q02",
+    "topic": "behavioral-traversal",
+    "lesson": "custom-iterator-implementation",
+    "type": "single-choice",
+    "prompt": "What does an iterator's next() method return in JavaScript/TypeScript?",
+    "explanation": "The iterator protocol returns { value, done }; done becomes true when iteration finishes.",
+    "options": [
+      {
+        "id": "a",
+        "text": "An object of the shape { value, done }"
+      },
+      {
+        "id": "b",
+        "text": "A boolean only"
+      },
+      {
+        "id": "c",
+        "text": "The entire collection"
+      },
+      {
+        "id": "d",
+        "text": "A deep copy of the collection"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-traversal-q03",
+    "topic": "behavioral-traversal",
+    "lesson": "js-iterators-and-generators",
+    "type": "fill-blank",
+    "prompt": "An object is iterable if it has a [Symbol.____]() method returning an iterator.",
+    "explanation": "Symbol.iterator marks a class as iterable, enabling for...of, spread, and destructuring.",
+    "answer": [
+      "iterator",
+      "Iterator"
+    ]
+  },
+  {
+    "id": "behavioral-traversal-q04",
+    "topic": "behavioral-traversal",
+    "lesson": "js-iterators-and-generators",
+    "type": "single-choice",
+    "prompt": "How do generators simplify implementing the Iterator pattern?",
+    "explanation": "Generators create iterators automatically; you implement [Symbol.iterator] with a few lines of yield.",
+    "options": [
+      {
+        "id": "a",
+        "text": "A function* with yield automatically produces an iterator, so you don't hand-write next()"
+      },
+      {
+        "id": "b",
+        "text": "They make the collection a singleton"
+      },
+      {
+        "id": "c",
+        "text": "They deep-copy the collection first"
+      },
+      {
+        "id": "d",
+        "text": "They convert the collection to a different interface"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-traversal-q05",
+    "topic": "behavioral-traversal",
+    "lesson": "iterator-intent",
+    "type": "single-choice",
+    "prompt": "Why is Iterator often called a pattern the language gives you 'for free' in TypeScript?",
+    "explanation": "The protocol is part of the language; you supply Symbol.iterator (often a generator) and the built-ins handle traversal.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The iterator protocol is built in, so for...of and spread work once you implement Symbol.iterator"
+      },
+      {
+        "id": "b",
+        "text": "Because arrays cannot be iterated"
+      },
+      {
+        "id": "c",
+        "text": "Because it requires no code at all, ever"
+      },
+      {
+        "id": "d",
+        "text": "Because it only works on numbers"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-traversal-q06",
+    "topic": "behavioral-traversal",
+    "lesson": "js-iterators-and-generators",
+    "type": "single-choice",
+    "prompt": "What advantage do generators give for large or infinite sequences?",
+    "explanation": "Generators pause between values, enabling lazy and even infinite sequences without building the whole list.",
+    "options": [
+      {
+        "id": "a",
+        "text": "They compute values lazily, so you only pay for the values you consume"
+      },
+      {
+        "id": "b",
+        "text": "They materialize the whole sequence up front"
+      },
+      {
+        "id": "c",
+        "text": "They guarantee a single instance"
+      },
+      {
+        "id": "d",
+        "text": "They encrypt each value"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q01",
+    "topic": "behavioral-coordination",
+    "lesson": "mediator-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Mediator pattern?",
+    "explanation": "Mediator centralizes interaction between colleagues. Sequential access = Iterator; capture/restore = Memento; one instance = Singleton.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define an object that encapsulates how a set of objects interact, so they don't reference each other directly"
+      },
+      {
+        "id": "b",
+        "text": "Access a collection's elements sequentially"
+      },
+      {
+        "id": "c",
+        "text": "Capture and restore an object's state"
+      },
+      {
+        "id": "d",
+        "text": "Ensure a class has one instance"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q02",
+    "topic": "behavioral-coordination",
+    "lesson": "centralized-component-coordination",
+    "type": "single-choice",
+    "prompt": "How does Mediator change the shape of communication among many objects?",
+    "explanation": "Colleagues each hold one link (to the mediator), turning a tangled web into spokes around a hub.",
+    "options": [
+      {
+        "id": "a",
+        "text": "It replaces a web of many-to-many references with a hub-and-spoke through the mediator"
+      },
+      {
+        "id": "b",
+        "text": "It removes all communication between objects"
+      },
+      {
+        "id": "c",
+        "text": "It forces every object to be a singleton"
+      },
+      {
+        "id": "d",
+        "text": "It makes each object reference every other object"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q03",
+    "topic": "behavioral-coordination",
+    "lesson": "mediator-vs-observer",
+    "type": "single-choice",
+    "prompt": "How does Mediator differ from Observer?",
+    "explanation": "Observer broadcasts to interested subscribers; Mediator encapsulates the rules of how a set of colleagues interact.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Observer is one-to-many notification to subscribers; Mediator coordinates many-to-many interaction and often holds the interaction logic"
+      },
+      {
+        "id": "b",
+        "text": "They are identical"
+      },
+      {
+        "id": "c",
+        "text": "Mediator only works with one object"
+      },
+      {
+        "id": "d",
+        "text": "Observer converts interfaces"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q04",
+    "topic": "behavioral-coordination",
+    "lesson": "mediator-intent",
+    "type": "single-choice",
+    "prompt": "What is the main risk of the Mediator pattern?",
+    "explanation": "Centralizing all interaction logic can bloat the mediator; the complexity is centralized, not removed.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The mediator can become a god object that absorbs all coordination logic"
+      },
+      {
+        "id": "b",
+        "text": "It always causes memory leaks"
+      },
+      {
+        "id": "c",
+        "text": "It makes objects impossible to test"
+      },
+      {
+        "id": "d",
+        "text": "It requires multiple inheritance"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q05",
+    "topic": "behavioral-coordination",
+    "lesson": "centralized-component-coordination",
+    "type": "single-choice",
+    "prompt": "Which real-world role is a classic Mediator analogy?",
+    "explanation": "Pilots talk only to the tower, which coordinates them — a hub replacing a web of direct deals.",
+    "options": [
+      {
+        "id": "a",
+        "text": "An air-traffic controller that coordinates planes so they don't negotiate directly"
+      },
+      {
+        "id": "b",
+        "text": "A library lending one shared book"
+      },
+      {
+        "id": "c",
+        "text": "A travel power adapter"
+      },
+      {
+        "id": "d",
+        "text": "A cookie cutter"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q06",
+    "topic": "behavioral-coordination",
+    "lesson": "mediator-vs-observer",
+    "type": "single-choice",
+    "prompt": "When is a Mediator unnecessary?",
+    "explanation": "Mediator earns its keep with genuinely many-to-many coordination; for two objects it just adds a needless hub.",
+    "options": [
+      {
+        "id": "a",
+        "text": "When only two objects interact and could talk directly"
+      },
+      {
+        "id": "b",
+        "text": "When many interdependent form controls must coordinate"
+      },
+      {
+        "id": "c",
+        "text": "When you want to change interaction logic in one place"
+      },
+      {
+        "id": "d",
+        "text": "When objects should not reference each other"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q07",
+    "topic": "behavioral-coordination",
+    "lesson": "memento-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Memento pattern?",
+    "explanation": "Memento snapshots state for later restoration. Object interaction = Mediator; sequential access = Iterator; converting = Adapter.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Capture and externalize an object's internal state, without violating encapsulation, so it can be restored later"
+      },
+      {
+        "id": "b",
+        "text": "Define how a set of objects interact"
+      },
+      {
+        "id": "c",
+        "text": "Access a collection's elements sequentially"
+      },
+      {
+        "id": "d",
+        "text": "Convert one interface into another"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q08",
+    "topic": "behavioral-coordination",
+    "lesson": "originator-caretaker-memento",
+    "type": "match-pair",
+    "prompt": "Match each Memento role to its responsibility.",
+    "explanation": "The originator owns the state; the memento holds it opaquely; the caretaker keeps mementos hands-off.",
+    "pairs": [
+      {
+        "left": "Originator",
+        "right": "Creates and restores snapshots of its own state"
+      },
+      {
+        "left": "Memento",
+        "right": "The opaque snapshot of state"
+      },
+      {
+        "left": "Caretaker",
+        "right": "Stores mementos without inspecting them"
+      }
+    ]
+  },
+  {
+    "id": "behavioral-coordination-q09",
+    "topic": "behavioral-coordination",
+    "lesson": "originator-caretaker-memento",
+    "type": "single-choice",
+    "prompt": "Why must the caretaker treat a memento as opaque?",
+    "explanation": "Keeping the memento opaque means other objects can't read or tamper with the originator's internal state.",
+    "options": [
+      {
+        "id": "a",
+        "text": "To preserve encapsulation — only the originator should interpret the saved internals"
+      },
+      {
+        "id": "b",
+        "text": "Because mementos are always encrypted"
+      },
+      {
+        "id": "c",
+        "text": "Because the caretaker is a singleton"
+      },
+      {
+        "id": "d",
+        "text": "Because it makes the memento faster"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q10",
+    "topic": "behavioral-coordination",
+    "lesson": "memento-state-snapshots",
+    "type": "single-choice",
+    "prompt": "Which pattern does Memento commonly pair with to implement undo?",
+    "explanation": "Command represents the action; Memento restores the prior state, together giving clean undo/redo.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Command — a command captures a memento before executing and restores it in undo()"
+      },
+      {
+        "id": "b",
+        "text": "Flyweight"
+      },
+      {
+        "id": "c",
+        "text": "Abstract Factory"
+      },
+      {
+        "id": "d",
+        "text": "Adapter"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q11",
+    "topic": "behavioral-coordination",
+    "lesson": "memento-tradeoffs",
+    "type": "single-choice",
+    "prompt": "What is the main cost of using Memento?",
+    "explanation": "Snapshots consume memory; you often bound the history or store diffs for large state.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Memory — snapshots can be large, and a long history multiplies that"
+      },
+      {
+        "id": "b",
+        "text": "It forces multiple inheritance"
+      },
+      {
+        "id": "c",
+        "text": "It prevents undo"
+      },
+      {
+        "id": "d",
+        "text": "It always breaks encapsulation"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q12",
+    "topic": "behavioral-coordination",
+    "lesson": "memento-state-snapshots",
+    "type": "fill-blank",
+    "prompt": "Memento is the standard foundation for implementing ____ in editors and apps.",
+    "explanation": "Restoring a prior snapshot is exactly how undo (and redo) is implemented.",
+    "answer": [
+      "undo",
+      "Undo",
+      "undo/redo"
+    ]
+  },
+  {
+    "id": "behavioral-coordination-q13",
+    "topic": "behavioral-coordination",
+    "lesson": "observer-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Observer pattern?",
+    "explanation": "Observer is one-to-many automatic notification. Request-as-object = Command; capture/restore = Memento; simplify = Facade.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define a one-to-many dependency so that when a subject changes, all its observers are notified automatically"
+      },
+      {
+        "id": "b",
+        "text": "Encapsulate a request as an object"
+      },
+      {
+        "id": "c",
+        "text": "Capture and restore an object's state"
+      },
+      {
+        "id": "d",
+        "text": "Provide a simplified interface to a subsystem"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q14",
+    "topic": "behavioral-coordination",
+    "lesson": "push-vs-pull-observer",
+    "type": "single-choice",
+    "prompt": "What is the difference between push and pull delivery in Observer?",
+    "explanation": "Push hands observers the data; pull lets observers ask the subject for exactly what they want.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Push sends the changed data to observers; pull notifies minimally and observers fetch what they need"
+      },
+      {
+        "id": "b",
+        "text": "Push is always slower than pull"
+      },
+      {
+        "id": "c",
+        "text": "Pull sends all data; push sends none"
+      },
+      {
+        "id": "d",
+        "text": "They are the same"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q15",
+    "topic": "behavioral-coordination",
+    "lesson": "observer-memory-leaks-and-cleanup",
+    "type": "single-choice",
+    "prompt": "What is the most common bug with Observer, and how do you avoid it?",
+    "explanation": "Un-removed observers keep the subject referencing them, leaking memory and firing stray updates; unsubscribe when done.",
+    "options": [
+      {
+        "id": "a",
+        "text": "A memory leak from observers that never unsubscribe — always remove an observer when it goes away"
+      },
+      {
+        "id": "b",
+        "text": "A stack overflow from cloning — always deep-copy"
+      },
+      {
+        "id": "c",
+        "text": "A race condition — always use two threads"
+      },
+      {
+        "id": "d",
+        "text": "A syntax error — always use interfaces"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q16",
+    "topic": "behavioral-coordination",
+    "lesson": "observer-intent",
+    "type": "single-choice",
+    "prompt": "Is Observer the same thing as pub/sub or reactive programming?",
+    "explanation": "Observer is the core idea; pub/sub and reactive libraries build on it with extra machinery.",
+    "options": [
+      {
+        "id": "a",
+        "text": "No — it's the basis of them, but pub/sub adds a broker and reactive adds operators and scheduling"
+      },
+      {
+        "id": "b",
+        "text": "Yes, they are identical"
+      },
+      {
+        "id": "c",
+        "text": "Yes, but only in TypeScript"
+      },
+      {
+        "id": "d",
+        "text": "No — they are completely unrelated"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-coordination-q17",
+    "topic": "behavioral-coordination",
+    "lesson": "observer-memory-leaks-and-cleanup",
+    "type": "multiple-choice",
+    "prompt": "Which are real consequences (good or bad) of Observer? Select all that apply.",
+    "explanation": "Observer gives loose coupling and runtime subscription but risks leaks; notification order is NOT guaranteed.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Loose coupling between subject and observers"
+      },
+      {
+        "id": "b",
+        "text": "Observers can be added or removed at runtime"
+      },
+      {
+        "id": "c",
+        "text": "Memory leaks if observers aren't unsubscribed"
+      },
+      {
+        "id": "d",
+        "text": "A guaranteed notification order"
+      }
+    ],
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  {
+    "id": "behavioral-coordination-q18",
+    "topic": "behavioral-coordination",
+    "lesson": "subject-observer-subscription",
+    "type": "single-choice",
+    "prompt": "Why did Java deprecate java.util.Observer/Observable in Java 9?",
+    "explanation": "The pattern remains sound; Java's specific naive classes were deprecated in favor of better tools.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The naive built-in implementation was too limited — a caution about naive implementations, not the pattern itself"
+      },
+      {
+        "id": "b",
+        "text": "Because the Observer pattern is fundamentally broken"
+      },
+      {
+        "id": "c",
+        "text": "Because observers are always singletons"
+      },
+      {
+        "id": "d",
+        "text": "Because it converts interfaces incorrectly"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-algorithms-q01",
+    "topic": "behavioral-algorithms",
+    "lesson": "strategy-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Strategy pattern?",
+    "explanation": "Strategy makes algorithms interchangeable. Behavior changing with state = State; capture/restore = Memento; one instance = Singleton.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define a family of interchangeable algorithms so the algorithm can vary independently from clients"
+      },
+      {
+        "id": "b",
+        "text": "Let an object change behavior as its internal state changes"
+      },
+      {
+        "id": "c",
+        "text": "Capture and restore an object's state"
+      },
+      {
+        "id": "d",
+        "text": "Ensure a class has one instance"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-algorithms-q02",
+    "topic": "behavioral-algorithms",
+    "lesson": "state-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the State pattern?",
+    "explanation": "State ties behavior to a changing internal mode. Simplify = Facade; selecting an algorithm = Strategy; sharing state = Flyweight.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Allow an object to alter its behavior when its internal state changes, so it appears to change its class"
+      },
+      {
+        "id": "b",
+        "text": "Provide a simplified interface to a subsystem"
+      },
+      {
+        "id": "c",
+        "text": "Select one of several interchangeable algorithms"
+      },
+      {
+        "id": "d",
+        "text": "Share intrinsic state across many objects"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-algorithms-q03",
+    "topic": "behavioral-algorithms",
+    "lesson": "strategy-vs-state-distinction",
+    "type": "single-choice",
+    "prompt": "Strategy and State share nearly the same structure. What is the KEY difference?",
+    "explanation": "Same delegation structure, different intent: choosing an algorithm (Strategy) vs behavior tied to self-transitioning state (State).",
+    "options": [
+      {
+        "id": "a",
+        "text": "Intent and who drives the change: the client picks a Strategy; a State object transitions itself as its state changes"
+      },
+      {
+        "id": "b",
+        "text": "Strategy uses inheritance and State uses composition"
+      },
+      {
+        "id": "c",
+        "text": "They have completely different class diagrams"
+      },
+      {
+        "id": "d",
+        "text": "State cannot be implemented in TypeScript"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-algorithms-q04",
+    "topic": "behavioral-algorithms",
+    "lesson": "state-machine-transitions",
+    "type": "single-choice",
+    "prompt": "In the State pattern, who usually triggers the move to the next state?",
+    "explanation": "States commonly reference and transition to other states, so the object advances on its own.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The state objects themselves — a state knows and sets the next state"
+      },
+      {
+        "id": "b",
+        "text": "The client always sets it manually, like a Strategy"
+      },
+      {
+        "id": "c",
+        "text": "A global singleton registry"
+      },
+      {
+        "id": "d",
+        "text": "The garbage collector"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-algorithms-q05",
+    "topic": "behavioral-algorithms",
+    "lesson": "strategy-vs-state-distinction",
+    "type": "match-pair",
+    "prompt": "Match each characteristic to the pattern it best fits.",
+    "explanation": "Strategy lets clients inject interchangeable algorithms; State encapsulates internal lifecycle transitions; Template Method fixes the algorithm skeleton while deferring steps to subclasses.",
+    "pairs": [
+      {
+        "left": "Interchangeable algorithms selected dynamically by client",
+        "right": "Strategy"
+      },
+      {
+        "left": "Encapsulates state-dependent behavior and triggers internal transitions",
+        "right": "State"
+      },
+      {
+        "left": "Defines fixed algorithm skeleton in base class with subclass steps",
+        "right": "Template Method"
+      }
+    ]
+  },
+  {
+    "id": "behavioral-algorithms-q06",
+    "topic": "behavioral-algorithms",
+    "lesson": "state-machine-transitions",
+    "type": "single-choice",
+    "prompt": "You're replacing a large if/else on an order's 'status' that changes over time (pending, paid, shipped). Which pattern fits?",
+    "explanation": "A changing status with per-mode behavior and transitions is the State pattern; Strategy would be a one-time algorithm choice.",
+    "options": [
+      {
+        "id": "a",
+        "text": "State — the object moves through modes with different behavior"
+      },
+      {
+        "id": "b",
+        "text": "Strategy — you're just picking one algorithm once"
+      },
+      {
+        "id": "c",
+        "text": "Singleton"
+      },
+      {
+        "id": "d",
+        "text": "Flyweight"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-algorithms-q07",
+    "topic": "behavioral-algorithms",
+    "lesson": "template-method-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Template Method pattern?",
+    "explanation": "Template Method fixes the skeleton and defers steps to subclasses. Swappable whole algorithms = Strategy; simplify = Facade; one instance = Singleton.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define the skeleton of an algorithm and let subclasses redefine certain steps without changing its structure"
+      },
+      {
+        "id": "b",
+        "text": "Define a family of interchangeable algorithms selected at runtime"
+      },
+      {
+        "id": "c",
+        "text": "Provide a simplified interface to a subsystem"
+      },
+      {
+        "id": "d",
+        "text": "Ensure a class has one instance"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-algorithms-q08",
+    "topic": "behavioral-algorithms",
+    "lesson": "hooks-and-abstract-steps",
+    "type": "single-choice",
+    "prompt": "What is the difference between an abstract step and a hook?",
+    "explanation": "Abstract steps are required; hooks provide defaults and are optional to override.",
+    "options": [
+      {
+        "id": "a",
+        "text": "An abstract step must be implemented by subclasses; a hook has a default that may optionally be overridden"
+      },
+      {
+        "id": "b",
+        "text": "They are the same thing"
+      },
+      {
+        "id": "c",
+        "text": "A hook must be implemented; an abstract step is optional"
+      },
+      {
+        "id": "d",
+        "text": "Hooks can only appear in interfaces"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-algorithms-q09",
+    "topic": "behavioral-algorithms",
+    "lesson": "base-algorithm-skeleton",
+    "type": "single-choice",
+    "prompt": "The Hollywood Principle ('Don't call us, we'll call you') describes:",
+    "explanation": "Control is inverted: the base-class template method calls down into the subclass's steps at the right moments.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The base class controls the flow and calls the subclass's steps"
+      },
+      {
+        "id": "b",
+        "text": "Subclasses call the base class to run the algorithm"
+      },
+      {
+        "id": "c",
+        "text": "Objects notify observers of changes"
+      },
+      {
+        "id": "d",
+        "text": "A client selects an algorithm at runtime"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-algorithms-q10",
+    "topic": "behavioral-algorithms",
+    "lesson": "template-method-vs-strategy",
+    "type": "single-choice",
+    "prompt": "How does Template Method differ from Strategy?",
+    "explanation": "Template Method = inheritance + overridable steps; Strategy = composition + swappable algorithm object.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Template Method uses inheritance with a fixed skeleton; Strategy uses composition to swap an entire algorithm at runtime"
+      },
+      {
+        "id": "b",
+        "text": "They are identical"
+      },
+      {
+        "id": "c",
+        "text": "Strategy uses inheritance; Template Method uses composition"
+      },
+      {
+        "id": "d",
+        "text": "Template Method can only run once"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-algorithms-q11",
+    "topic": "behavioral-algorithms",
+    "lesson": "template-method-vs-strategy",
+    "type": "single-choice",
+    "prompt": "What is the main limitation of Template Method?",
+    "explanation": "Inheritance is rigid; mixing independent variations often calls for composition (Strategy/Decorator).",
+    "options": [
+      {
+        "id": "a",
+        "text": "It relies on inheritance, so variations can't be combined as flexibly as with composition"
+      },
+      {
+        "id": "b",
+        "text": "It always leaks memory"
+      },
+      {
+        "id": "c",
+        "text": "It cannot enforce step order"
+      },
+      {
+        "id": "d",
+        "text": "It requires a database"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-algorithms-q12",
+    "topic": "behavioral-algorithms",
+    "lesson": "base-algorithm-skeleton",
+    "type": "fill-blank",
+    "prompt": "The base-class method that holds the fixed algorithm skeleton and should NOT be overridden is called the ____ method.",
+    "explanation": "The template method defines the invariant skeleton and calls the varying steps.",
+    "answer": [
+      "template",
+      "Template"
+    ]
+  },
+  {
+    "id": "behavioral-traversal-q07",
+    "topic": "behavioral-traversal",
+    "lesson": "interpreter-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Interpreter pattern?",
+    "explanation": "Interpreter maps grammar rules to classes that evaluate themselves. Adding operations without changing classes = Visitor; one instance = Singleton; converting = Adapter.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define a representation for a language's grammar plus an interpreter that uses it to interpret sentences"
+      },
+      {
+        "id": "b",
+        "text": "Add operations to an object structure without changing its classes"
+      },
+      {
+        "id": "c",
+        "text": "Ensure a class has one instance"
+      },
+      {
+        "id": "d",
+        "text": "Convert one interface into another"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-traversal-q08",
+    "topic": "behavioral-traversal",
+    "lesson": "visitor-intent",
+    "type": "single-choice",
+    "prompt": "What is the intent of the Visitor pattern?",
+    "explanation": "Visitor externalizes operations so elements needn't change. Interpreting = Interpreter; sharing state = Flyweight; simplifying = Facade.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define a new operation over an object structure without changing the element classes"
+      },
+      {
+        "id": "b",
+        "text": "Interpret sentences of a small language"
+      },
+      {
+        "id": "c",
+        "text": "Share intrinsic state across many objects"
+      },
+      {
+        "id": "d",
+        "text": "Provide a simplified interface to a subsystem"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-traversal-q09",
+    "topic": "behavioral-traversal",
+    "lesson": "double-dispatch-mechanism",
+    "type": "single-choice",
+    "prompt": "What is 'double dispatch', which Visitor relies on?",
+    "explanation": "element.accept(visitor) dispatches on the element, then visitor.visitConcrete(this) dispatches on the visitor — two types decide the behavior.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Selecting behavior based on two types — the element and the visitor"
+      },
+      {
+        "id": "b",
+        "text": "Calling a method twice for safety"
+      },
+      {
+        "id": "c",
+        "text": "Sending the same event to two subjects"
+      },
+      {
+        "id": "d",
+        "text": "Cloning an object two levels deep"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-traversal-q10",
+    "topic": "behavioral-traversal",
+    "lesson": "visitor-tradeoffs",
+    "type": "single-choice",
+    "prompt": "What is the 'expression problem' as it applies to Visitor?",
+    "explanation": "New operation = new visitor (easy); new element type = a new visit method in every visitor (hard).",
+    "options": [
+      {
+        "id": "a",
+        "text": "Visitor makes adding new operations easy but adding new element types hard (every visitor must change)"
+      },
+      {
+        "id": "b",
+        "text": "Visitors cannot evaluate math expressions"
+      },
+      {
+        "id": "c",
+        "text": "Interpreters can't handle variables"
+      },
+      {
+        "id": "d",
+        "text": "Double dispatch is impossible in TypeScript"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-traversal-q11",
+    "topic": "behavioral-traversal",
+    "lesson": "ast-expression-evaluation",
+    "type": "single-choice",
+    "prompt": "When is Interpreter usually the WRONG choice?",
+    "explanation": "A class-per-rule design doesn't scale to complex languages; use a parser or parser generator instead.",
+    "options": [
+      {
+        "id": "a",
+        "text": "For anything beyond a small, stable grammar — a real language needs a proper parser"
+      },
+      {
+        "id": "b",
+        "text": "For evaluating a tiny boolean filter language"
+      },
+      {
+        "id": "c",
+        "text": "For a simple arithmetic expression"
+      },
+      {
+        "id": "d",
+        "text": "For a small configuration DSL"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "behavioral-traversal-q12",
+    "topic": "behavioral-traversal",
+    "lesson": "visitor-intent",
+    "type": "single-choice",
+    "prompt": "Choose Visitor when you expect:",
+    "explanation": "Visitor pays off when operations multiply but element types stay stable; changing types often is where it hurts.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Many operations over a stable set of element types"
+      },
+      {
+        "id": "b",
+        "text": "Frequent addition of new element types"
+      },
+      {
+        "id": "c",
+        "text": "Exactly one operation, forever"
+      },
+      {
+        "id": "d",
+        "text": "A single global instance"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "architecture-selection-q01",
+    "topic": "architecture-selection",
+    "lesson": "how-to-choose-a-design-pattern",
+    "type": "single-choice",
+    "prompt": "What is the right starting point for choosing a design pattern?",
+    "explanation": "Start from the problem, use the category as a map, and match by intent — not by scanning the catalog for something to apply.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The problem's forces and the matching pattern's intent"
+      },
+      {
+        "id": "b",
+        "text": "Browsing the catalog for a pattern that looks interesting"
+      },
+      {
+        "id": "c",
+        "text": "Whichever pattern you used most recently"
+      },
+      {
+        "id": "d",
+        "text": "The pattern with the most classes"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "architecture-selection-q02",
+    "topic": "architecture-selection",
+    "lesson": "avoiding-overengineering-yagni",
+    "type": "fill-blank",
+    "prompt": "The principle warning against building flexibility for imagined future needs is abbreviated ____.",
+    "explanation": "YAGNI — 'You Aren't Gonna Need It' — cautions against speculative complexity, including speculatively applied patterns.",
+    "answer": [
+      "YAGNI",
+      "yagni"
+    ]
+  },
+  {
+    "id": "architecture-selection-q03",
+    "topic": "architecture-selection",
+    "lesson": "golden-hammer-and-lava-flow",
+    "type": "single-choice",
+    "prompt": "What is the 'Golden Hammer' anti-pattern?",
+    "explanation": "The Golden Hammer forces a familiar pattern everywhere — 'if all you have is a hammer, everything looks like a nail.'",
+    "options": [
+      {
+        "id": "a",
+        "text": "Over-applying one favorite pattern to every problem"
+      },
+      {
+        "id": "b",
+        "text": "Using the fastest possible algorithm"
+      },
+      {
+        "id": "c",
+        "text": "Writing code with no patterns at all"
+      },
+      {
+        "id": "d",
+        "text": "Refactoring too rarely"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "architecture-selection-q04",
+    "topic": "architecture-selection",
+    "lesson": "refactoring-toward-patterns",
+    "type": "single-choice",
+    "prompt": "What does 'refactor toward patterns' mean?",
+    "explanation": "Patterns are destinations you refactor toward once a genuine pressure emerges, not starting templates.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Write simple code first and introduce a pattern when a real recurring pressure appears"
+      },
+      {
+        "id": "b",
+        "text": "Always start every class from a pattern template"
+      },
+      {
+        "id": "c",
+        "text": "Remove all patterns during refactoring"
+      },
+      {
+        "id": "d",
+        "text": "Apply every pattern preemptively to be safe"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "architecture-selection-q05",
+    "topic": "architecture-selection",
+    "lesson": "how-to-choose-a-design-pattern",
+    "type": "multiple-choice",
+    "prompt": "Which of these are patterns that live BEYOND the 23 Gang of Four patterns? Select all that apply.",
+    "explanation": "MVC, DI, and Repository are architectural/enterprise patterns (or a technique, for DI). Observer is one of the 23 GoF patterns.",
+    "options": [
+      {
+        "id": "a",
+        "text": "MVC (Model-View-Controller)"
+      },
+      {
+        "id": "b",
+        "text": "Dependency Injection"
+      },
+      {
+        "id": "c",
+        "text": "Repository"
+      },
+      {
+        "id": "d",
+        "text": "Observer"
+      }
+    ],
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  {
+    "id": "architecture-selection-q06",
+    "topic": "architecture-selection",
+    "lesson": "how-to-choose-a-design-pattern",
+    "type": "single-choice",
+    "prompt": "Why can a design pattern sometimes be unnecessary in TypeScript?",
+    "explanation": "As Norvig noted, many GoF patterns are simpler or invisible in higher-level languages — e.g. Strategy/Command as functions, Iterator built in.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Language features (first-class functions, built-in iterators) can provide the pattern's end directly"
+      },
+      {
+        "id": "b",
+        "text": "TypeScript forbids design patterns"
+      },
+      {
+        "id": "c",
+        "text": "Patterns only work in Java"
+      },
+      {
+        "id": "d",
+        "text": "TypeScript automatically applies all 23 patterns"
+      }
+    ],
+    "answer": "a"
+  },
+  {
+    "id": "architecture-selection-q07",
+    "topic": "architecture-selection",
+    "lesson": "god-object-and-spaghetti-code",
+    "type": "single-choice",
+    "prompt": "What is the defining symptom of the 'God Object' (The Blob) anti-pattern?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A single monolithic class centralizes most business rules, state, and dependencies, turning other classes into dumb data holders"
+      },
+      {
+        "id": "b",
+        "text": "Having too many tiny interfaces with only one method each"
+      },
+      {
+        "id": "c",
+        "text": "Using static methods exclusively across all modules"
+      },
+      {
+        "id": "d",
+        "text": "Relying on database triggers instead of application code"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The God Object concentrates excessive responsibilities into one massive class, violating SRP and creating untestable, tightly coupled code."
+  },
+  {
+    "id": "architecture-selection-q08",
+    "topic": "architecture-selection",
+    "lesson": "golden-hammer-and-lava-flow",
+    "type": "single-choice",
+    "prompt": "What is the 'Lava Flow' anti-pattern commonly found in legacy codebases?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Obsolete, poorly understood code that remains frozen in production because teams are terrified deleting it will cause outages"
+      },
+      {
+        "id": "b",
+        "text": "Continuous delivery pipelines deploying code too rapidly"
+      },
+      {
+        "id": "c",
+        "text": "Overusing asynchronous streams and event listeners"
+      },
+      {
+        "id": "d",
+        "text": "Writing excessive unit tests for deprecated features"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Lava Flow is dead or obsolete legacy code that solidifies over time. Because nobody understands its historical context and tests are lacking, developers fear touching or deleting it."
+  },
+  {
+    "id": "architecture-selection-q09",
+    "topic": "architecture-selection",
+    "lesson": "avoiding-overengineering-yagni",
+    "type": "single-choice",
+    "prompt": "According to Martin Fowler's Rule of Three, when should you extract duplicate code into an abstraction or design pattern?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Upon writing the third distinct occurrence of the pattern or requirement"
+      },
+      {
+        "id": "b",
+        "text": "Before writing the very first line of production code"
+      },
+      {
+        "id": "c",
+        "text": "Immediately upon writing the first duplication"
+      },
+      {
+        "id": "d",
+        "text": "Only after rewriting the entire application from scratch"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The Rule of Three suggests: write it once; when you duplicate it, wince but tolerate it; when you encounter it a third time, refactor into an abstraction or design pattern."
+  },
+  {
+    "id": "architecture-selection-q10",
+    "topic": "architecture-selection",
+    "lesson": "god-object-and-spaghetti-code",
+    "type": "multiple-choice",
+    "prompt": "Which of the following are proven strategies for decomposing a God Object? Select all that apply.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Group methods by business actor or reason to change and extract them into focused domain services"
+      },
+      {
+        "id": "b",
+        "text": "Retain the original God Object class as a thin Facade coordinator during the transition"
+      },
+      {
+        "id": "c",
+        "text": "Write automated regression characterization tests before moving methods"
+      },
+      {
+        "id": "d",
+        "text": "Rename the class to ApplicationManager without moving any methods"
+      }
+    ],
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ],
+    "explanation": "Decomposing a God Object requires characterization tests, grouping responsibilities by actor (SRP), extracting services, and temporarily using the old class as a Facade. Merely renaming the class changes nothing."
+  }
+]

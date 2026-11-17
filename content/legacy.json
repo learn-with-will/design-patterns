@@ -1,0 +1,270 @@
+[
+  {
+    "id": "lesson-01",
+    "slug": "what-are-design-patterns",
+    "title": "What Are Design Patterns?",
+    "lessons": [
+      "what-is-a-design-pattern",
+      "gof-categories-and-catalog",
+      "design-principles-interfaces-composition",
+      "uml-basics-for-patterns",
+      "when-to-use-patterns"
+    ]
+  },
+  {
+    "id": "lesson-02",
+    "slug": "solid-principles",
+    "title": "The SOLID Principles",
+    "lessons": [
+      "single-responsibility-principle",
+      "open-closed-principle",
+      "liskov-substitution-principle",
+      "interface-segregation-principle",
+      "dependency-inversion-principle",
+      "dip-vs-di-vs-ioc"
+    ]
+  },
+  {
+    "id": "lesson-03",
+    "slug": "factory-method",
+    "title": "Factory Method",
+    "lessons": [
+      "factory-method-intent",
+      "factory-method-implementation",
+      "parameterized-factory-methods",
+      "factory-method-tradeoffs"
+    ]
+  },
+  {
+    "id": "lesson-04",
+    "slug": "abstract-factory",
+    "title": "Abstract Factory",
+    "lessons": [
+      "abstract-factory-intent",
+      "abstract-factory-families",
+      "abstract-factory-vs-factory-method",
+      "abstract-factory-tradeoffs"
+    ]
+  },
+  {
+    "id": "lesson-05",
+    "slug": "builder",
+    "title": "Builder",
+    "lessons": [
+      "builder-intent",
+      "step-by-step-builder",
+      "fluent-builder-in-typescript",
+      "builder-director-and-variants"
+    ]
+  },
+  {
+    "id": "lesson-06",
+    "slug": "prototype",
+    "title": "Prototype",
+    "lessons": [
+      "prototype-intent",
+      "shallow-vs-deep-cloning",
+      "prototype-registry",
+      "prototype-vs-js-prototypes"
+    ]
+  },
+  {
+    "id": "lesson-07",
+    "slug": "singleton",
+    "title": "Singleton",
+    "lessons": [
+      "singleton-intent",
+      "singleton-implementation-ts",
+      "singleton-drawbacks-and-antipattern",
+      "singleton-alternatives-modules-di"
+    ]
+  },
+  {
+    "id": "lesson-08",
+    "slug": "adapter",
+    "title": "Adapter",
+    "lessons": [
+      "adapter-intent",
+      "object-adapter-vs-class-adapter",
+      "adapter-in-practice",
+      "adapter-tradeoffs"
+    ]
+  },
+  {
+    "id": "lesson-09",
+    "slug": "bridge",
+    "title": "Bridge",
+    "lessons": [
+      "bridge-intent",
+      "separating-abstraction-implementation",
+      "bridge-in-cross-platform-code",
+      "bridge-vs-adapter"
+    ]
+  },
+  {
+    "id": "lesson-10",
+    "slug": "composite",
+    "title": "Composite",
+    "lessons": [
+      "composite-intent",
+      "uniform-tree-hierarchy",
+      "composite-recursive-operations",
+      "composite-tradeoffs"
+    ]
+  },
+  {
+    "id": "lesson-11",
+    "slug": "decorator",
+    "title": "Decorator",
+    "lessons": [
+      "decorator-intent",
+      "wrapping-behavior-dynamically",
+      "stacking-multiple-decorators",
+      "decorator-vs-inheritance"
+    ]
+  },
+  {
+    "id": "lesson-12",
+    "slug": "facade",
+    "title": "Facade",
+    "lessons": [
+      "facade-intent",
+      "subsystem-simplification",
+      "facade-vs-adapter-vs-mediator"
+    ]
+  },
+  {
+    "id": "lesson-13",
+    "slug": "flyweight",
+    "title": "Flyweight",
+    "lessons": [
+      "flyweight-intent",
+      "intrinsic-vs-extrinsic-state",
+      "flyweight-factory-and-cache",
+      "flyweight-tradeoffs-memory"
+    ]
+  },
+  {
+    "id": "lesson-14",
+    "slug": "proxy",
+    "title": "Proxy",
+    "lessons": [
+      "proxy-intent",
+      "virtual-proxy-lazy-loading",
+      "protection-and-caching-proxies",
+      "proxy-vs-decorator-vs-adapter"
+    ]
+  },
+  {
+    "id": "lesson-15",
+    "slug": "chain-of-responsibility",
+    "title": "Chain of Responsibility",
+    "lessons": [
+      "chain-of-responsibility-intent",
+      "handler-chain-linking",
+      "middleware-pipelines",
+      "chain-of-responsibility-tradeoffs"
+    ]
+  },
+  {
+    "id": "lesson-16",
+    "slug": "command",
+    "title": "Command",
+    "lessons": [
+      "command-intent",
+      "command-pattern-implementation",
+      "undo-redo-with-commands",
+      "command-queuing-and-logging"
+    ]
+  },
+  {
+    "id": "lesson-17",
+    "slug": "iterator",
+    "title": "Iterator",
+    "lessons": [
+      "iterator-intent",
+      "custom-iterator-implementation",
+      "js-iterators-and-generators"
+    ]
+  },
+  {
+    "id": "lesson-18",
+    "slug": "mediator",
+    "title": "Mediator",
+    "lessons": [
+      "mediator-intent",
+      "centralized-component-coordination",
+      "mediator-vs-observer"
+    ]
+  },
+  {
+    "id": "lesson-19",
+    "slug": "memento",
+    "title": "Memento",
+    "lessons": [
+      "memento-intent",
+      "originator-caretaker-memento",
+      "memento-state-snapshots",
+      "memento-tradeoffs"
+    ]
+  },
+  {
+    "id": "lesson-20",
+    "slug": "observer",
+    "title": "Observer",
+    "lessons": [
+      "observer-intent",
+      "subject-observer-subscription",
+      "push-vs-pull-observer",
+      "observer-memory-leaks-and-cleanup"
+    ]
+  },
+  {
+    "id": "lesson-21",
+    "slug": "strategy-and-state",
+    "title": "Strategy & State",
+    "lessons": [
+      "strategy-intent",
+      "strategy-implementation-ts",
+      "state-intent",
+      "state-machine-transitions",
+      "strategy-vs-state-distinction"
+    ]
+  },
+  {
+    "id": "lesson-22",
+    "slug": "template-method",
+    "title": "Template Method",
+    "lessons": [
+      "template-method-intent",
+      "base-algorithm-skeleton",
+      "hooks-and-abstract-steps",
+      "template-method-vs-strategy"
+    ]
+  },
+  {
+    "id": "lesson-23",
+    "slug": "interpreter-and-visitor",
+    "title": "Interpreter & Visitor",
+    "lessons": [
+      "interpreter-intent",
+      "ast-expression-evaluation",
+      "visitor-intent",
+      "double-dispatch-mechanism",
+      "visitor-tradeoffs"
+    ]
+  },
+  {
+    "id": "lesson-24",
+    "slug": "choosing-patterns-and-anti-patterns",
+    "title": "Choosing Patterns & Avoiding Anti-Patterns",
+    "lessons": [
+      "how-to-choose-a-design-pattern",
+      "refactoring-toward-patterns",
+      "avoiding-overengineering-yagni",
+      "recognizing-software-antipatterns",
+      "god-object-and-spaghetti-code",
+      "golden-hammer-and-lava-flow"
+    ]
+  }
+]
